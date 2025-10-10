@@ -1,0 +1,19 @@
+name: cxxgeom
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11            # optional if you use conda just for build tools
+  - cmake>=3.24
+  - ninja
+  - make
+  - vtk>=9.2
+  - openvdb
+  - tbb
+  - eigen
+  - git
+  - pip
+  - compilers              # gives clang/g++ on macOS/Linux
+
+  # Run a shell script after environment creation (custom build step)
+  #- pip:
+  #    - -r requirements.txt
