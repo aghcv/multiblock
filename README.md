@@ -1,2 +1,3 @@
 # multiblock
-Takes an open surface mesh and comprehensively characterizes the geometry in a vtk multiblock object  
+
+`multiblock` provides tools to analyze and manipulate surface meshes using VTK multiblock structures.
