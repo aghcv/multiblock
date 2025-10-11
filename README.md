@@ -28,18 +28,24 @@ multiblock/
 # 🧩 Quickstart: Set up multiblock-core (C++ geometry environment)
 
 ## 1. Clone the repository
+```bash
 git clone https://github.com/<your-org>/<your-repo>.git
 cd <your-repo>
+```
 
 ## 2. Configure conda-forge channel (once)
+```bash
 conda config --add channels conda-forge
 conda config --set channel_priority strict
+```
 
 ## 3. Create a clean environment
+```bash
 conda env remove -n cxxgeom --yes || true
 conda env create -f environment.yml
 conda activate cxxgeom
 bash .conda/post-link.sh
+```
 
 ## 4. Verify installation
 ```bash
@@ -50,12 +56,16 @@ bash .conda/post-link.sh
 ```
 
 ## 5. Configure the CMake build
+```bash
 rm -rf build
 mkdir -p build && cd build
 cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
+```
 
 ## 6. Build the project
+```bash
 ninja
+```
 
 ## 7. Run example
 ./multiblock ../data/example.vtp
