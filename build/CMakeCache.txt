@@ -80,9 +80,6 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Enable/Disable output of build database during the build.
 CMAKE_EXPORT_BUILD_DATABASE:BOOL=
 
-//Enable/Disable output of compile commands during generation.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
-
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/Users/aghorban/code/multiblock/build/CMakeFiles/pkgRedirects
 
@@ -275,6 +272,9 @@ Eigen3_DIR:PATH=/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/eigen3/
 //Eigen include directory
 Eigen3_INCLUDE_DIR:PATH=/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include/eigen3
 
+//The directory containing a CMake configuration file for GTest.
+GTest_DIR:PATH=/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/GTest
+
 //lz4 include directory
 LZ4_INCLUDE_DIR:PATH=/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include
 
@@ -447,8 +447,6 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXPORT_BUILD_DATABASE
 CMAKE_EXPORT_BUILD_DATABASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
-CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
@@ -517,7 +515,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -596,8 +594,6 @@ FIND_PACKAGE_MESSAGE_DETAILS_utf8cpp:INTERNAL=[/opt/homebrew/Caskroom/miniconda/
 LZ4_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: LZ4_LIBRARY
 LZ4_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OpenVDB_INCLUDE_DIR
-OpenVDB_INCLUDE_DIR-ADVANCED:INTERNAL=1
 PC_EXPAT_CFLAGS:INTERNAL=
 PC_EXPAT_CFLAGS_I:INTERNAL=
 PC_EXPAT_CFLAGS_OTHER:INTERNAL=

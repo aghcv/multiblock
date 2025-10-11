@@ -5,22 +5,21 @@
 ```bash
 multiblock/
 ├── CMakeLists.txt
-├── cmake/                        # helper scripts (optional)
-│   └── FindVMTK.cmake            # custom finder if not installed
 ├── src/
 │   ├── main.cpp                  # example app
-│   ├── centerline_extraction.cpp
-│   ├── distance_field.cpp
-│   ├── ownership_map.cpp
+│   ├── io_utils.cpp
 │   └── ...
 ├── include/
 │   ├── fastvessels/
-│   │   ├── centerline_extraction.hpp
-│   │   ├── distance_field.hpp
-│   │   ├── ownership_map.hpp
-│   │   └── common.hpp
+│   │   ├── io_utils.hpp
+│   │   └── ...
 ├── tests/
-│   └── test_basic.cpp
+│   ├── data/
+│   │   └── cube.stl
+│   │   CMakeLists.txt
+│   └── test_io_utils.cpp
+├── environment.yml  
+├── post_build_vmtk.sh
 └── README.md
 ```
 
@@ -61,6 +60,7 @@ bash .conda/post-link.sh
 rm -rf build
 mkdir -p build && cd build
 cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
+ctest --output-on-failure   # if you want to run the UT
 ```
 
 ## 6. Build the project

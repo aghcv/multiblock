@@ -5,7 +5,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_UNAME"
     description: "Path to a program."
@@ -70,14 +70,14 @@ events:
     kind: "message-v1"
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       The system is: Darwin - 24.6.0 - arm64
   -
     kind: "find-v1"
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_MAKE_PROGRAM"
     description: "Program used to build from build.ninja files."
@@ -139,7 +139,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER"
     description: "CXX compiler"
@@ -200,7 +200,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -242,7 +242,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ 
@@ -263,7 +263,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Detecting CXX compiler apple sysroot: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++" "-ftree-vectorize" "-fPIC" "-fstack-protector-strong" "-O2" "-pipe" "-stdlib=libc++" "-fvisibility-inlines-hidden" "-fmessage-length=0" "-isystem" "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include" "-E" "apple-sdk.cpp"
         # 1 "apple-sdk.cpp"
@@ -304,7 +304,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -360,7 +360,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_RANLIB"
     description: "Path to a program."
@@ -434,7 +434,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_STRIP"
     description: "Path to a program."
@@ -490,7 +490,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
@@ -546,7 +546,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_NM"
     description: "Path to a program."
@@ -620,7 +620,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_OBJDUMP"
     description: "Path to a program."
@@ -694,7 +694,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_OBJCOPY"
     description: "Path to a program."
@@ -768,7 +768,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_READELF"
     description: "Path to a program."
@@ -842,7 +842,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_DLLTOOL"
     description: "Path to a program."
@@ -916,7 +916,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_ADDR2LINE"
     description: "Path to a program."
@@ -990,7 +990,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_TAPI"
     description: "Path to a program."
@@ -1077,7 +1077,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/Compiler/Clang-FindBinUtils.cmake:26 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_AR"
     description: "LLVM archiver"
@@ -1196,7 +1196,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/Compiler/Clang-FindBinUtils.cmake:38 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_RANLIB"
     description: "Generate index for LLVM archive"
@@ -1315,7 +1315,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/Compiler/Clang-FindBinUtils.cmake:50 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS"
     description: "`clang-scan-deps` dependency scanner"
@@ -1434,7 +1434,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/Platform/Darwin.cmake:76 (find_program)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake:32 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_INSTALL_NAME_TOOL"
     description: "Path to a program."
@@ -1493,12 +1493,12 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-hNUQFw"
-      binary: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-hNUQFw"
+      source: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-aoA47j"
+      binary: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-aoA47j"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_CXX_FLAGS: "-ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include"
@@ -1512,17 +1512,17 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-hNUQFw'
+        Change Dir: '/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-aoA47j'
         
-        Run Build Command(s): /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/ninja -v cmTC_b07c2
-        [1/2] /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/ninja -v cmTC_c60eb
+        [1/2] /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
         clang version 19.1.7
         Target: arm64-apple-darwin20.0.0
         Thread model: posix
         InstalledDir: /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin
         arm64-apple-darwin20.0: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
          (in-process)
-         "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/clang-19" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=26.0 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-hNUQFw -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-hNUQFw -resource-dir /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19 -dependency-file CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
+         "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/clang-19" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=26.0 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-aoA47j -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-aoA47j -resource-dir /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19 -dependency-file CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 19.1.7 based upon LLVM 19.1.7 default target arm64-apple-darwin24.6.0
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
@@ -1534,12 +1534,12 @@ events:
          /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
          /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        [2/2] : && /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v -Wl,-v CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_b07c2   && :
+        [2/2] : && /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v -Wl,-v CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_c60eb   && :
         clang version 19.1.7
         Target: arm64-apple-darwin20.0.0
         Thread model: posix
         InstalledDir: /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin
-         "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/libLTO.19.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 26.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_b07c2 -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/lib/darwin/libclang_rt.osx.a
+         "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/libLTO.19.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 26.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_c60eb -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld  PROJECT:ld64-955.13
         BUILD 20:57:23 Oct  5 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em riscv32 (tvOS)
@@ -1555,7 +1555,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Effective list of requested architectures (possibly empty)  : ""
       Effective list of architectures found in the ABI info binary: "arm64"
@@ -1564,7 +1564,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
@@ -1586,22 +1586,22 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-hNUQFw']
+        ignore line: [Change Dir: '/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-aoA47j']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/ninja -v cmTC_b07c2]
-        ignore line: [[1/2] /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/ninja -v cmTC_c60eb]
+        ignore line: [[1/2] /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang version 19.1.7]
         ignore line: [Target: arm64-apple-darwin20.0.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin]
         ignore line: [arm64-apple-darwin20.0: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ (in-process)]
-        ignore line: [ "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/clang-19" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=26.0 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-hNUQFw -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-hNUQFw -resource-dir /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19 -dependency-file CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/clang-19" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=26.0 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-aoA47j -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-aoA47j -resource-dir /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19 -dependency-file CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 19.1.7 based upon LLVM 19.1.7 default target arm64-apple-darwin24.6.0]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"]
@@ -1613,12 +1613,12 @@ events:
         ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
         ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [[2/2] : && /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v -Wl -v CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_b07c2   && :]
+        ignore line: [[2/2] : && /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v -Wl -v CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_c60eb   && :]
         ignore line: [clang version 19.1.7]
         ignore line: [Target: arm64-apple-darwin20.0.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin]
-        link line: [ "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/libLTO.19.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 26.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_b07c2 -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/libLTO.19.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 26.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_c60eb -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/lib/darwin/libclang_rt.osx.a]
           arg [/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1635,7 +1635,7 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_b07c2] ==> ignore
+          arg [cmTC_c60eb] ==> ignore
           arg [-L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib] ==> dir [/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
@@ -1644,7 +1644,7 @@ events:
           arg [-rpath] ==> ignore
           arg [/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_b07c2.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_c60eb.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/lib/darwin/libclang_rt.osx.a]
@@ -1677,7 +1677,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:168 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     name: "nlohmann_json"
     configs:
       -
@@ -1788,12 +1788,12 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/FindThreads.cmake:163 (_threads_check_libc)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:215 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-YmC6A0"
-      binary: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-YmC6A0"
+      source: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-vaOvaq"
+      binary: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-vaOvaq"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_CXX_FLAGS: "-ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include"
@@ -1807,11 +1807,11 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-YmC6A0'
+        Change Dir: '/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-vaOvaq'
         
-        Run Build Command(s): /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/ninja -v cmTC_2276d
-        [1/2] /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -DCMAKE_HAVE_LIBC_PTHREAD  -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_2276d.dir/src.cxx.o -MF CMakeFiles/cmTC_2276d.dir/src.cxx.o.d -o CMakeFiles/cmTC_2276d.dir/src.cxx.o -c /Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-YmC6A0/src.cxx
-        [2/2] : && /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib CMakeFiles/cmTC_2276d.dir/src.cxx.o -o cmTC_2276d   && :
+        Run Build Command(s): /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/ninja -v cmTC_a967f
+        [1/2] /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -DCMAKE_HAVE_LIBC_PTHREAD  -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_a967f.dir/src.cxx.o -MF CMakeFiles/cmTC_a967f.dir/src.cxx.o.d -o CMakeFiles/cmTC_a967f.dir/src.cxx.o -c /Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-vaOvaq/src.cxx
+        [2/2] : && /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib CMakeFiles/cmTC_a967f.dir/src.cxx.o -o cmTC_a967f   && :
         
       exitCode: 0
   -
@@ -1819,7 +1819,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:356 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     name: "fmt"
     configs:
       -
@@ -1933,7 +1933,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/Findutf8cpp.cmake:1 (find_path)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:497 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     mode: "path"
     variable: "utf8cpp_INCLUDE_DIR"
     description: "utf8cpp include directory"
@@ -2099,7 +2099,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/FindZLIB.cmake:152 (find_path)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:826 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     mode: "path"
     variable: "ZLIB_INCLUDE_DIR"
     description: "Path to a file."
@@ -2267,7 +2267,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/FindZLIB.cmake:182 (find_library)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:826 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     mode: "library"
     variable: "ZLIB_LIBRARY_RELEASE"
     description: "Path to a library."
@@ -2375,7 +2375,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/FindZLIB.cmake:183 (find_library)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:826 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     mode: "library"
     variable: "ZLIB_LIBRARY_DEBUG"
     description: "Path to a library."
@@ -2763,7 +2763,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:967 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     name: "pugixml"
     configs:
       -
@@ -2875,7 +2875,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/FindEigen3.cmake:1 (find_path)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:1155 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     mode: "path"
     variable: "Eigen3_INCLUDE_DIR"
     description: "Eigen include directory"
@@ -3087,7 +3087,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/FindEXPAT.cmake:32 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:1202 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     mode: "program"
     variable: "PKG_CONFIG_EXECUTABLE"
     description: "pkg-config executable"
@@ -3302,7 +3302,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/FindEXPAT.cmake:37 (find_path)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:1202 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     mode: "path"
     variable: "EXPAT_INCLUDE_DIR"
     description: "Path to a file."
@@ -3419,7 +3419,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/FindEXPAT.cmake:40 (find_library)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:1202 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     mode: "library"
     variable: "EXPAT_LIBRARY"
     description: "Path to a library."
@@ -3517,7 +3517,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/FindLZ4.cmake:1 (find_path)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:1249 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     mode: "path"
     variable: "LZ4_INCLUDE_DIR"
     description: "lz4 include directory"
@@ -3634,7 +3634,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/FindLZ4.cmake:5 (find_library)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:1249 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     mode: "library"
     variable: "LZ4_LIBRARY"
     description: "lz4 library"
@@ -3732,7 +3732,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/FindLZMA.cmake:1 (find_path)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:1296 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     mode: "path"
     variable: "LZMA_INCLUDE_DIR"
     description: "lzma include directory"
@@ -3849,7 +3849,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/FindLZMA.cmake:4 (find_library)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:1296 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     mode: "library"
     variable: "LZMA_LIBRARY"
     description: "lzma library"
@@ -3947,7 +3947,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/FindTBB.cmake:75 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:1484 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     name: "TBB"
     configs:
       -
@@ -4051,7 +4051,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/Finddouble-conversion.cmake:1 (find_path)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:1549 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     mode: "path"
     variable: "double-conversion_INCLUDE_DIR"
     description: "double-conversion include directory"
@@ -4215,7 +4215,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/Finddouble-conversion.cmake:9 (find_library)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/VTK-vtk-module-find-packages.cmake:1549 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/vtk-9.5/vtk-config.cmake:171 (include)"
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     mode: "library"
     variable: "double-conversion_LIBRARY"
     description: "double-conversion library"
@@ -4309,7 +4309,7 @@ events:
   -
     kind: "find_package-v1"
     backtrace:
-      - "CMakeLists.txt:22 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
     name: "VTK"
     components:
       -
@@ -4441,7 +4441,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindOpenVDB.cmake:242 (find_path)"
-      - "CMakeLists.txt:38 (find_package)"
+      - "CMakeLists.txt:39 (find_package)"
     mode: "path"
     variable: "OpenVDB_openvdb_INCLUDE_DIR"
     description: "Path to a file."
@@ -4805,7 +4805,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindOpenVDB.cmake:399 (find_library)"
-      - "CMakeLists.txt:38 (find_package)"
+      - "CMakeLists.txt:39 (find_package)"
     mode: "library"
     variable: "OpenVDB_openvdb_LIBRARY"
     description: "Path to a library."
@@ -4908,7 +4908,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindTBB.cmake:167 (find_path)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindOpenVDB.cmake:491 (find_package)"
-      - "CMakeLists.txt:38 (find_package)"
+      - "CMakeLists.txt:39 (find_package)"
     mode: "path"
     variable: "Tbb_LEGACY_INCLUDE_DIR"
     description: "Path to a file."
@@ -5400,7 +5400,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindTBB.cmake:180 (find_path)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindOpenVDB.cmake:491 (find_package)"
-      - "CMakeLists.txt:38 (find_package)"
+      - "CMakeLists.txt:39 (find_package)"
     mode: "path"
     variable: "Tbb_INCLUDE_DIR"
     description: "Path to a file."
@@ -5759,7 +5759,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindTBB.cmake:276 (find_library)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindOpenVDB.cmake:491 (find_package)"
-      - "CMakeLists.txt:38 (find_package)"
+      - "CMakeLists.txt:39 (find_package)"
     mode: "library"
     variable: "Tbb_tbb_LIBRARY_RELEASE"
     description: "Path to a library."
@@ -5864,7 +5864,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindTBB.cmake:276 (find_library)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindOpenVDB.cmake:491 (find_package)"
-      - "CMakeLists.txt:38 (find_package)"
+      - "CMakeLists.txt:39 (find_package)"
     mode: "library"
     variable: "Tbb_tbb_LIBRARY_DEBUG"
     description: "Path to a library."
@@ -6005,7 +6005,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/Boost-1.88.0/BoostConfig.cmake:215 (boost_find_component)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/FindBoost.cmake:609 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindOpenVDB.cmake:632 (find_package)"
-      - "CMakeLists.txt:38 (find_package)"
+      - "CMakeLists.txt:39 (find_package)"
     name: "boost_headers"
     configs:
       -
@@ -6119,7 +6119,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/Boost-1.88.0/BoostConfig.cmake:262 (boost_find_component)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/FindBoost.cmake:609 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindOpenVDB.cmake:632 (find_package)"
-      - "CMakeLists.txt:38 (find_package)"
+      - "CMakeLists.txt:39 (find_package)"
     name: "boost_system"
     configs:
       -
@@ -6232,7 +6232,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/Boost-1.88.0/BoostConfig.cmake:262 (boost_find_component)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/FindBoost.cmake:609 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindOpenVDB.cmake:632 (find_package)"
-      - "CMakeLists.txt:38 (find_package)"
+      - "CMakeLists.txt:39 (find_package)"
     name: "boost_random"
     configs:
       -
@@ -6345,7 +6345,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/Boost-1.88.0/BoostConfig.cmake:262 (boost_find_component)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/FindBoost.cmake:609 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindOpenVDB.cmake:632 (find_package)"
-      - "CMakeLists.txt:38 (find_package)"
+      - "CMakeLists.txt:39 (find_package)"
     name: "boost_regex"
     configs:
       -
@@ -6457,7 +6457,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/Boost-1.88.0/BoostConfig.cmake:262 (boost_find_component)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/FindBoost.cmake:609 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindOpenVDB.cmake:632 (find_package)"
-      - "CMakeLists.txt:38 (find_package)"
+      - "CMakeLists.txt:39 (find_package)"
     name: "boost_iostreams"
     configs:
       -
@@ -6567,7 +6567,7 @@ events:
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/FindBoost.cmake:609 (find_package)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindOpenVDB.cmake:632 (find_package)"
-      - "CMakeLists.txt:38 (find_package)"
+      - "CMakeLists.txt:39 (find_package)"
     name: "Boost"
     components:
       -
@@ -6787,7 +6787,7 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/FindBoost.cmake:537 (find_path)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/FindBoost.cmake:642 (_boost_set_legacy_variables_from_config)"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindOpenVDB.cmake:632 (find_package)"
-      - "CMakeLists.txt:38 (find_package)"
+      - "CMakeLists.txt:39 (find_package)"
     mode: "path"
     variable: "Boost_INCLUDE_DIR"
     description: "Path to a file."
@@ -6859,7 +6859,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindTBB.cmake:276 (find_library)"
-      - "CMakeLists.txt:39 (find_package)"
+      - "CMakeLists.txt:40 (find_package)"
     mode: "library"
     variable: "Tbb_tbbmalloc_LIBRARY_RELEASE"
     description: "Path to a library."
@@ -6963,7 +6963,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindTBB.cmake:276 (find_library)"
-      - "CMakeLists.txt:39 (find_package)"
+      - "CMakeLists.txt:40 (find_package)"
     mode: "library"
     variable: "Tbb_tbbmalloc_LIBRARY_DEBUG"
     description: "Path to a library."
@@ -7101,7 +7101,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindTBB.cmake:276 (find_library)"
-      - "CMakeLists.txt:39 (find_package)"
+      - "CMakeLists.txt:40 (find_package)"
     mode: "library"
     variable: "Tbb_tbbmalloc_proxy_LIBRARY_RELEASE"
     description: "Path to a library."
@@ -7205,7 +7205,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB/FindTBB.cmake:276 (find_library)"
-      - "CMakeLists.txt:39 (find_package)"
+      - "CMakeLists.txt:40 (find_package)"
     mode: "library"
     variable: "Tbb_tbbmalloc_proxy_LIBRARY_DEBUG"
     description: "Path to a library."
@@ -7342,7 +7342,7 @@ events:
   -
     kind: "find_package-v1"
     backtrace:
-      - "CMakeLists.txt:40 (find_package)"
+      - "CMakeLists.txt:41 (find_package)"
     name: "Eigen3"
     configs:
       -
@@ -7462,7 +7462,7 @@ events:
   -
     kind: "find_package-v1"
     backtrace:
-      - "CMakeLists.txt:43 (find_package)"
+      - "CMakeLists.txt:44 (find_package)"
     name: "VMTK"
     configs:
       -
@@ -7688,4 +7688,105 @@ events:
         - "/Users/aghorban/code/multiblock/cmake"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/OpenVDB"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/openvdb"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/FindGTest.cmake:337 (find_package)"
+      - "CMakeLists.txt:148 (find_package)"
+    name: "GTest"
+    configs:
+      -
+        filename: "GTestConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "gtest-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "GTest"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/Users/aghorban/code/multiblock/build/CMakeFiles/pkgRedirects/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/aghorban/code/multiblock/build/CMakeFiles/pkgRedirects/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/GTest/GTestConfig.cmake"
+      mode: "config"
+      version: "1.17.0"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake"
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom"
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
+        - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
 ...

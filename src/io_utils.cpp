@@ -4,6 +4,7 @@
 #include <vtkPolyData.h>
 #include <vtkPolyDataReader.h>
 #include <vtkXMLPolyDataReader.h>
+#include <vtkSTLReader.h>
 #include <stdexcept>
 
 namespace fastvessels {
@@ -17,14 +18,25 @@ vtkSmartPointer<vtkPolyData> ReadPolyData(const std::string& filename) {
         reader->SetFileName(filename.c_str());
         reader->Update();
         polydata = reader->GetOutput();
-    } else if (extension == "vtp") {
+    } 
+    else if (extension == "vtp") {
         auto reader = vtkSmartPointer<vtkXMLPolyDataReader>::New();
         reader->SetFileName(filename.c_str());
         reader->Update();
         polydata = reader->GetOutput();
-    } else {
+    } 
+    else if (extension == "stl") {
+        auto reader = vtkSmartPointer<vtkSTLReader>::New();
+        reader->SetFileName(filename.c_str());
+        reader->Update();
+        polydata = reader->GetOutput();
+    }
+    else {
         throw std::runtime_error("Unsupported file format: " + extension);
     }
+
+    if (!polydata)
+        throw std::runtime_error("Failed to read file: " + filename);
 
     return polydata;
 }

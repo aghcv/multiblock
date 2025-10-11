@@ -1,0 +1,5 @@
+if(EXISTS "/Users/aghorban/code/multiblock/build/tests/multiblock_tests[1]_tests.cmake")
+  include("/Users/aghorban/code/multiblock/build/tests/multiblock_tests[1]_tests.cmake")
+else()
+  add_test(multiblock_tests_NOT_BUILT multiblock_tests_NOT_BUILT)
+endif()

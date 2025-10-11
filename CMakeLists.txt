@@ -50,16 +50,52 @@ else()
 endif()
 
 # ------------------------------------------------------------
-# Source files
+# Core library (used by tests and executable)
 # ------------------------------------------------------------
-file(GLOB SRC_FILES src/*.cpp)
+file(GLOB LIB_SOURCES CONFIGURE_DEPENDS
+    src/io_utils.cpp
+    src/centerline_extraction.cpp
+    src/distance_field.cpp
+    src/ownership_map.cpp
+)
+
+add_library(multiblock_lib STATIC ${LIB_SOURCES})
+target_include_directories(multiblock_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_link_libraries(multiblock_lib
+    PUBLIC
+        VTK::CommonCore
+        VTK::CommonDataModel
+        VTK::FiltersCore
+        VTK::FiltersModeling
+        VTK::IOXML
+        VTK::IOLegacy
+        OpenVDB::openvdb
+        TBB::tbb
+        Eigen3::Eigen
+)
+if(VMTK_FOUND)
+    target_link_libraries(multiblock_lib PUBLIC
+        VMTK::vmtkCommon
+        VMTK::vmtkComputationalGeometry
+        VMTK::vmtkIO
+    )
+endif()
 
 # ------------------------------------------------------------
-# Executable target
+# Executable (links the library)
 # ------------------------------------------------------------
-add_executable(multiblock
-    src/main.cpp
-    src/io_utils.cpp
+add_executable(multiblock src/main.cpp)
+target_link_libraries(multiblock PRIVATE multiblock_lib)
+
+vtk_module_autoinit(
+    TARGETS multiblock multiblock_lib
+    MODULES
+        VTK::CommonCore
+        VTK::CommonDataModel
+        VTK::FiltersCore
+        VTK::FiltersModeling
+        VTK::IOXML
+        VTK::IOLegacy
 )
 
 # Make headers visible to all targets
@@ -77,6 +113,7 @@ target_link_libraries(multiblock
         VTK::FiltersModeling
         VTK::IOXML
         VTK::IOLegacy
+        VTK::IOGeometry
         OpenVDB::openvdb
         TBB::tbb
         Eigen3::Eigen
@@ -101,3 +138,24 @@ vtk_module_autoinit(
         VTK::IOXML
         VTK::IOLegacy
 )
+
+# ------------------------------------------------------------
+# ✅ Add Unit Tests
+# ------------------------------------------------------------
+enable_testing()
+
+# Add GoogleTest (if installed via conda or system package)
+find_package(GTest QUIET)
+if(GTest_FOUND)
+    message(STATUS "✅ Found GTest: ${GTest_DIR}")
+    add_subdirectory(tests)           # <-- include your tests/ directory
+else()
+    message(WARNING "⚠️ GTest not found — skipping tests build.")
+endif()
+
+# ------------------------------------------------------------
+# ✅ (Optional) Add Examples
+# ------------------------------------------------------------
+#if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/examples/CMakeLists.txt")
+#    add_subdirectory(examples)
+#endif()
