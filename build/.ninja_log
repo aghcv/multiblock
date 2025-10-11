@@ -1,0 +1,4 @@
+# ninja log v7
+0	576	1760203875245862596	CMakeFiles/multiblock.dir/src/main.cpp.o	f8966509a1757bc8
+1	593	1760203875246049887	CMakeFiles/multiblock.dir/src/io_utils.cpp.o	d1572b3a133129
+593	633	1760203875838272937	multiblock	cd8bda263ac5e92e

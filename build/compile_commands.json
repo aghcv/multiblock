@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/aghorban/code/multiblock/build",
+  "command": "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -DBOOST_IOSTREAMS_DYN_LINK -DBOOST_IOSTREAMS_NO_LIB -DBOOST_RANDOM_DYN_LINK -DBOOST_RANDOM_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DOPENVDB_ABI_VERSION_NUMBER=12 -DOPENVDB_USE_DELAYED_LOADING -Dkiss_fft_scalar=double -I/Users/aghorban/code/multiblock/include -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include/vtk-9.5 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include/vtk-9.5/token -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include/vtk-9.5/vtkkissfft -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include/eigen3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -o CMakeFiles/multiblock.dir/src/main.cpp.o -c /Users/aghorban/code/multiblock/src/main.cpp",
+  "file": "/Users/aghorban/code/multiblock/src/main.cpp",
+  "output": "/Users/aghorban/code/multiblock/build/CMakeFiles/multiblock.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/aghorban/code/multiblock/build",
+  "command": "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -DBOOST_IOSTREAMS_DYN_LINK -DBOOST_IOSTREAMS_NO_LIB -DBOOST_RANDOM_DYN_LINK -DBOOST_RANDOM_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DOPENVDB_ABI_VERSION_NUMBER=12 -DOPENVDB_USE_DELAYED_LOADING -Dkiss_fft_scalar=double -I/Users/aghorban/code/multiblock/include -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include/vtk-9.5 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include/vtk-9.5/token -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include/vtk-9.5/vtkkissfft -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include/eigen3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -o CMakeFiles/multiblock.dir/src/io_utils.cpp.o -c /Users/aghorban/code/multiblock/src/io_utils.cpp",
+  "file": "/Users/aghorban/code/multiblock/src/io_utils.cpp",
+  "output": "/Users/aghorban/code/multiblock/build/CMakeFiles/multiblock.dir/src/io_utils.cpp.o"
+}
+]

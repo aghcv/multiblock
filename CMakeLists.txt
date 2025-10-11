@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 project(multiblock LANGUAGES CXX)
 
 # Add local cmake/ directory for custom find modules
@@ -56,7 +57,10 @@ file(GLOB SRC_FILES src/*.cpp)
 # ------------------------------------------------------------
 # Executable target
 # ------------------------------------------------------------
-add_executable(multiblock ${SRC_FILES})
+add_executable(multiblock
+    src/main.cpp
+    src/io_utils.cpp
+)
 
 # Make headers visible to all targets
 target_include_directories(multiblock

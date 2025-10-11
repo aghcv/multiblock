@@ -1,44 +1,32 @@
 #include "fastvessels/io_utils.hpp"
-#include <vtkSTLReader.h>
-#include <vtkPLYReader.h>
-#include <vtkXMLPolyDataReader.h>
-#include <vtkPolyDataReader.h>
+
 #include <vtkSmartPointer.h>
 #include <vtkPolyData.h>
-#include <filesystem>
-#include <iostream>
-
-namespace fs = std::filesystem;
+#include <vtkPolyDataReader.h>
+#include <vtkXMLPolyDataReader.h>
+#include <stdexcept>
 
 namespace fastvessels {
 
 vtkSmartPointer<vtkPolyData> ReadPolyData(const std::string& filename) {
-    std::string ext = fs::path(filename).extension().string();
-    vtkSmartPointer<vtkPolyDataAlgorithm> reader;
+    std::string extension = filename.substr(filename.find_last_of('.') + 1);
+    vtkSmartPointer<vtkPolyData> polydata;
 
-    if (ext == ".stl") {
-        reader = vtkSmartPointer<vtkSTLReader>::New();
-    } else if (ext == ".ply") {
-        reader = vtkSmartPointer<vtkPLYReader>::New();
-    } else if (ext == ".vtk") {
-        reader = vtkSmartPointer<vtkPolyDataReader>::New();
-    } else if (ext == ".vtp") {
-        reader = vtkSmartPointer<vtkXMLPolyDataReader>::New();
+    if (extension == "vtk") {
+        auto reader = vtkSmartPointer<vtkPolyDataReader>::New();
+        reader->SetFileName(filename.c_str());
+        reader->Update();
+        polydata = reader->GetOutput();
+    } else if (extension == "vtp") {
+        auto reader = vtkSmartPointer<vtkXMLPolyDataReader>::New();
+        reader->SetFileName(filename.c_str());
+        reader->Update();
+        polydata = reader->GetOutput();
     } else {
-        throw std::runtime_error("Unsupported file format: " + ext);
+        throw std::runtime_error("Unsupported file format: " + extension);
     }
 
-    reader->SetFileName(filename.c_str());
-    reader->Update();
-
-    auto poly = reader->GetOutput();
-    if (!poly || poly->GetNumberOfPoints() == 0)
-        throw std::runtime_error("Failed to read geometry or empty mesh.");
-
-    std::cout << "✅ Loaded " << filename << " with "
-              << poly->GetNumberOfPoints() << " points and "
-              << poly->GetNumberOfCells() << " cells.\n";
-    return poly;
+    return polydata;
 }
 
-} // namespace fastvessels
+}  // namespace fastvessels
