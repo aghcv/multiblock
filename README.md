@@ -2,7 +2,7 @@
 
 `multiblock` provides tools to analyze and manipulate surface meshes using VTK multiblock structures.
 
-'''bash
+```bash
 multiblock/
 ├── CMakeLists.txt
 ├── cmake/                        # helper scripts (optional)
@@ -22,7 +22,7 @@ multiblock/
 ├── tests/
 │   └── test_basic.cpp
 └── README.md
-'''
+```
 
 
 # 🧩 Quickstart: Set up multiblock-core (C++ geometry environment)
