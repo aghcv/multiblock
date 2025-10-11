@@ -18,45 +18,42 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Miniconda
+      - name: Set up Miniforge (Conda)
         uses: conda-incubator/setup-miniconda@v2
         with:
-          activate-environment: false
+          miniforge-version: 'latest'
           auto-update-conda: true
           python-version: ${{ matrix.python-version }}
           use-mamba: true
 
       - name: Create conda environment from environment.yml
         run: |
-          conda env create -f environment.yml -n cxxgeom --force
-          conda activate cxxgeom
+          mamba env create -f environment.yml -n cxxgeom --force
         shell: bash
 
       - name: Configure CMake
         run: |
-          conda activate cxxgeom
           mkdir -p build
           cd build
-          cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
+          # Use conda-run / mamba-run to execute inside the environment
+          mamba run -n cxxgeom cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
         shell: bash
 
       - name: Build
         run: |
-          conda activate cxxgeom
           cd build
-          ninja -v
+          mamba run -n cxxgeom ninja -v
         shell: bash
 
       - name: Run tests
         run: |
-          conda activate cxxgeom
           cd build
-          ctest --output-on-failure -j 2
+          mamba run -n cxxgeom ctest --output-on-failure -j 2
         shell: bash
 
       - name: Upload ctest results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ctest-logs
+          name: ctest-logs-${{ github.run_id }}-${{ matrix.os }}
           path: build/Testing/Temporary
