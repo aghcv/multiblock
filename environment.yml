@@ -7,7 +7,6 @@ dependencies:
   - ninja
   - make
   - vtk>=9.2
-  - openvdb
   - tbb
   - eigen
   - git
@@ -17,3 +16,4 @@ dependencies:
   # Run a shell script after environment creation (custom build step)
   #- pip:
   #    - -r requirements.txt
+  #  - "bash ./.conda/post-link.sh"

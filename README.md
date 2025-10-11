@@ -3,7 +3,7 @@
 `multiblock` provides tools to analyze and manipulate surface meshes using VTK multiblock structures.
 
 
-multiblock-core/
+multiblock/
 ├── CMakeLists.txt
 ├── cmake/                        # helper scripts (optional)
 │   └── FindVMTK.cmake            # custom finder if not installed
@@ -41,12 +41,21 @@ conda config --set channel_priority strict
 conda env remove -n cxxgeom --yes || true
 conda env create -f environment.yml
 conda activate cxxgeom
+bash .conda/post-link.sh
 
 # 4. Verify installation
-cmake --version
-conda list | egrep "vtk|openvdb|tbb|eigen"
+# already implemented in .coda/post_link.sh
+# cmake --version
+# conda list | egrep "vtk|openvdb|tbb|eigen"
+# find $CONDA_PREFIX/lib -name "libvmtk*" && echo "✅ VMTK installed successfully"
 
-# Verify VMTK installation after automated build
-find $CONDA_PREFIX/lib -name "libvmtk*" && echo "✅ VMTK installed successfully"
+# 5. Configure the CMake build
+rm -rf build
+mkdir -p build && cd build
+cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
 
-# ✅ Environment 'cxxgeom' is now ready for building and automating VMTK
+# 6. Build the project
+ninja
+
+# 7. Run example
+./multiblock ../data/example.vtp
