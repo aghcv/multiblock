@@ -1,2 +1,2 @@
-IOUtils.CanReadSimpleSTL 1 0.0336211
+IOUtils.CanReadSimpleSTL 2 0.0150195
 ---
