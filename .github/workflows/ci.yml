@@ -21,15 +21,16 @@ jobs:
       - name: Set up micromamba (fast conda)
         uses: mamba-org/setup-micromamba@v1
         with:
-          version: '1.4.2'
-          shell: bash
+          micromamba-version: '1.4.2'
+          init-shell: true
+          generate-run-shell: true
+          download-micromamba: true
 
       - name: Create conda environment from environment.yml (micromamba)
         run: |
           set -euo pipefail
-          # micromamba expects a slightly different invocation; try create
-          # then fallback to env update
-          if micromamba create -f environment.yml -n cxxgeom -y; then
+          # Try env create; fallback to env update if create fails.
+          if micromamba env create -f environment.yml -n cxxgeom -y; then
             echo "Environment created"
           else
             echo "Create failed, attempting env update"
@@ -67,7 +68,19 @@ jobs:
 
       - name: Upload ctest results
         if: always()
+        run: |
+          if [ -d build/Testing/Temporary ]; then
+            echo "Uploading ctest logs"
+            mkdir -p artifacts
+            cp -r build/Testing/Temporary artifacts/ || true
+          else
+            echo "No ctest logs found"
+          fi
+        shell: bash
+
+      - name: Upload artifact (if present)
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: ctest-logs-${{ github.run_id }}-${{ matrix.os }}
-          path: build/Testing/Temporary
+          path: artifacts
