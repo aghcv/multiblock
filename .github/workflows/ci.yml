@@ -1,86 +1,52 @@
-name: CI
+name: Build and Test (CMake + Ninja)
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, master ]
 
 jobs:
   build:
+    name: Build and Test (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-        python-version: [3.11]
 
     steps:
+      # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up micromamba (fast conda)
-        uses: mamba-org/setup-micromamba@v1
-        with:
-          micromamba-version: '1.4.2'
-          init-shell: true
-          generate-run-shell: true
-          download-micromamba: true
-
-      - name: Create conda environment from environment.yml (micromamba)
+      # 2️⃣ Install dependencies
+      - name: Install dependencies
         run: |
-          set -euo pipefail
-          # Try env create; fallback to env update if create fails.
-          if micromamba env create -f environment.yml -n cxxgeom -y; then
-            echo "Environment created"
-          else
-            echo "Create failed, attempting env update"
-            micromamba env update -f environment.yml -n cxxgeom
+          if [[ "$RUNNER_OS" == "Linux" ]]; then
+            sudo apt-get update
+            sudo apt-get install -y cmake ninja-build libtbb-dev zlib1g-dev libopenvdb-dev libgtest-dev
+            # Compile gtest static libs if not prebuilt
+            if [ ! -f /usr/lib/libgtest.a ]; then
+              cd /usr/src/gtest
+              sudo cmake .
+              sudo make
+              sudo cp *.a /usr/lib
+            fi
+          elif [[ "$RUNNER_OS" == "macOS" ]]; then
+            brew update
+            brew install cmake ninja openvdb tbb
           fi
-        shell: bash
 
-      - name: Clean build directory
-        run: |
-          # Remove any checked-in or leftover build artifacts (CMakeCache, CMakeFiles)
-          # to avoid "CMakeCache.txt directory ... is different" errors when the
-          # cache was created on another machine with absolute paths.
-          if [ -d build ]; then rm -rf build; fi
-        shell: bash
-
+      # 3️⃣ Configure (CMake)
       - name: Configure CMake
-        run: |
-          mkdir -p build
-          cd build
-          # Use micromamba to run cmake inside the environment
-          micromamba run -n cxxgeom cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
-        shell: bash
+        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
 
+      # 4️⃣ Build (Ninja)
       - name: Build
+        run: cmake --build build --config Release
+
+      # 5️⃣ Run Tests (CTest)
+      - name: Run unit tests
         run: |
           cd build
-          micromamba run -n cxxgeom ninja -v
-        shell: bash
-
-      - name: Run tests
-        run: |
-          cd build
-          micromamba run -n cxxgeom ctest --output-on-failure -j 2
-        shell: bash
-
-      - name: Upload ctest results
-        if: always()
-        run: |
-          if [ -d build/Testing/Temporary ]; then
-            echo "Uploading ctest logs"
-            mkdir -p artifacts
-            cp -r build/Testing/Temporary artifacts/ || true
-          else
-            echo "No ctest logs found"
-          fi
-        shell: bash
-
-      - name: Upload artifact (if present)
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: ctest-logs-${{ github.run_id }}-${{ matrix.os }}
-          path: artifacts
+          ctest --output-on-failure --verbose
