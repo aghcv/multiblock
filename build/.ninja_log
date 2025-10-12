@@ -1,5 +1,5 @@
 # ninja log v7
-1	14	1760225358720460706	/Users/aghorban/code/multiblock/build/CMakeFiles/cmake.verify_globs	b390e9928545313e
+1	13	1760227912134861805	/Users/aghorban/code/multiblock/build/CMakeFiles/cmake.verify_globs	b390e9928545313e
 17	542	1760225358736269326	CMakeFiles/multiblock.dir/src/main.cpp.o	f8966509a1757bc8
 16	562	1760225358736011741	CMakeFiles/multiblock_lib.dir/src/io_utils.cpp.o	b6c3029ca2852835
 562	599	1760225359282052607	libmultiblock_lib.a	3fe219b1f85d6a9b
@@ -8,4 +8,12 @@
 684	989	1760225359707293083	tests/multiblock_tests	bd276b12d36c8f8b
 684	989	1760225359707293083	tests/multiblock_tests[1]_tests.cmake	bd276b12d36c8f8b
 684	989	1760225359707293083	/Users/aghorban/code/multiblock/build/tests/multiblock_tests[1]_tests.cmake	bd276b12d36c8f8b
-1	15	1760227025138123982	/Users/aghorban/code/multiblock/build/CMakeFiles/cmake.verify_globs	b390e9928545313e
+1	15	1760227926188666932	/Users/aghorban/code/multiblock/build/CMakeFiles/cmake.verify_globs	b390e9928545313e
+18	541	1760227926205197244	CMakeFiles/multiblock.dir/src/main.cpp.o	f8966509a1757bc8
+18	560	1760227926204993357	CMakeFiles/multiblock_lib.dir/src/io_utils.cpp.o	b6c3029ca2852835
+560	597	1760227926747728246	libmultiblock_lib.a	3fe219b1f85d6a9b
+597	635	1760227926784554656	multiblock	7d0cd753d57f4652
+18	677	1760227926205319976	tests/CMakeFiles/multiblock_tests.dir/test_io_utils.cpp.o	776c7571fed5c0b8
+677	985	1760227927170753339	tests/multiblock_tests	bd276b12d36c8f8b
+677	985	1760227927170753339	tests/multiblock_tests[1]_tests.cmake	bd276b12d36c8f8b
+677	985	1760227927170753339	/Users/aghorban/code/multiblock/build/tests/multiblock_tests[1]_tests.cmake	bd276b12d36c8f8b

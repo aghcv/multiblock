@@ -18,46 +18,51 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Miniforge (Conda)
-        uses: conda-incubator/setup-miniconda@v2
+      - name: Set up micromamba (fast conda)
+        uses: mamba-org/setup-micromamba@v1
         with:
-          miniforge-version: 'latest'
-          auto-update-conda: true
-          python-version: ${{ matrix.python-version }}
-          use-mamba: true
+          version: '1.4.2'
+          shell: bash
 
-      - name: Create conda environment from environment.yml
+      - name: Create conda environment from environment.yml (micromamba)
         run: |
-          # Create the environment; some mamba versions (packaged by runners)
-          # don't accept `--force`. Try a plain create first; if it fails,
-          # update (which will create or update as needed).
           set -euo pipefail
-          if mamba env create -f environment.yml -n cxxgeom; then
+          # micromamba expects a slightly different invocation; try create
+          # then fallback to env update
+          if micromamba create -f environment.yml -n cxxgeom -y; then
             echo "Environment created"
           else
             echo "Create failed, attempting env update"
-            mamba env update -f environment.yml -n cxxgeom
+            micromamba env update -f environment.yml -n cxxgeom
           fi
+        shell: bash
+
+      - name: Clean build directory
+        run: |
+          # Remove any checked-in or leftover build artifacts (CMakeCache, CMakeFiles)
+          # to avoid "CMakeCache.txt directory ... is different" errors when the
+          # cache was created on another machine with absolute paths.
+          if [ -d build ]; then rm -rf build; fi
         shell: bash
 
       - name: Configure CMake
         run: |
           mkdir -p build
           cd build
-          # Use conda-run / mamba-run to execute inside the environment
-          mamba run -n cxxgeom cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
+          # Use micromamba to run cmake inside the environment
+          micromamba run -n cxxgeom cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
         shell: bash
 
       - name: Build
         run: |
           cd build
-          mamba run -n cxxgeom ninja -v
+          micromamba run -n cxxgeom ninja -v
         shell: bash
 
       - name: Run tests
         run: |
           cd build
-          mamba run -n cxxgeom ctest --output-on-failure -j 2
+          micromamba run -n cxxgeom ctest --output-on-failure -j 2
         shell: bash
 
       - name: Upload ctest results
