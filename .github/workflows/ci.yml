@@ -24,7 +24,7 @@ jobs:
         run: |
           if [[ "$RUNNER_OS" == "Linux" ]]; then
             sudo apt-get update
-            sudo apt-get install -y cmake ninja-build libtbb-dev zlib1g-dev libopenvdb-dev libgtest-dev
+            sudo apt-get install -y cmake ninja-build libtbb-dev zlib1g-dev libopenvdb-dev libgtest-dev libvtk-dev
             # Compile gtest static libs if not prebuilt
             if [ ! -f /usr/lib/libgtest.a ]; then
               cd /usr/src/gtest
@@ -34,7 +34,7 @@ jobs:
             fi
           elif [[ "$RUNNER_OS" == "macOS" ]]; then
             brew update
-            brew install cmake ninja openvdb tbb
+            brew install cmake ninja openvdb tbb vtk
           fi
 
       # 3️⃣ Configure (CMake)
