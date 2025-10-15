@@ -1,9 +1,0 @@
-/Users/aghorban/code/multiblock/build/CMakeFiles/multiblock_lib.dir
-/Users/aghorban/code/multiblock/build/CMakeFiles/multiblock.dir
-/Users/aghorban/code/multiblock/build/CMakeFiles/test.dir
-/Users/aghorban/code/multiblock/build/CMakeFiles/edit_cache.dir
-/Users/aghorban/code/multiblock/build/CMakeFiles/rebuild_cache.dir
-/Users/aghorban/code/multiblock/build/tests/CMakeFiles/multiblock_tests.dir
-/Users/aghorban/code/multiblock/build/tests/CMakeFiles/test.dir
-/Users/aghorban/code/multiblock/build/tests/CMakeFiles/edit_cache.dir
-/Users/aghorban/code/multiblock/build/tests/CMakeFiles/rebuild_cache.dir

@@ -38,6 +38,14 @@ jobs:
           fi
 
       # 3️⃣ Configure (CMake)
+      # 3️⃣ Clean previous build artifacts (prevent CMakeCache mismatch on runners)
+      - name: Clean previous build artifacts
+        run: |
+          echo "Removing any pre-existing build directory and CMake cache files"
+          rm -rf build
+          rm -f CMakeCache.txt
+          rm -rf CMakeFiles
+
       - name: Configure CMake
         run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
 

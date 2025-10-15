@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/Users/aghorban/code/multiblock/build/cmake_install.cmake",
-		"/Users/aghorban/code/multiblock/build/tests/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
