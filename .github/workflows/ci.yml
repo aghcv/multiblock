@@ -33,8 +33,12 @@ jobs:
               sudo cp *.a /usr/lib
             fi
           elif [[ "$RUNNER_OS" == "macOS" ]]; then
-            brew update
-            brew install cmake ninja openvdb tbb vtk
+            # Avoid running a full `brew update` on runners (can be cancelled / slow).
+            # Disable Homebrew's auto-update and retry installs to be resilient to transient failures.
+            export HOMEBREW_NO_AUTO_UPDATE=1
+            for i in 1 2 3; do
+              HOMEBREW_NO_AUTO_UPDATE=1 brew install cmake ninja openvdb tbb vtk && break || sleep 5
+            done
           fi
 
       # 3️⃣ Configure (CMake)
