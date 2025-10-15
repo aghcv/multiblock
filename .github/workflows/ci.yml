@@ -12,33 +12,31 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        # Run only macOS for parity with your local conda-based setup
+        os: [macos-latest]
 
     steps:
       # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Install dependencies
-      - name: Install dependencies
+      # 2️⃣ Setup Conda environment (mirror local `environment.yml`)
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-update-conda: false
+          python-version: 3.11
+
+      - name: Create and activate conda env
+        shell: bash -l {0}
         run: |
-          if [[ "$RUNNER_OS" == "Linux" ]]; then
-            sudo apt-get update
-            sudo apt-get install -y cmake ninja-build libtbb-dev zlib1g-dev libopenvdb-dev libgtest-dev libvtk-dev
-            # Compile gtest static libs if not prebuilt
-            if [ ! -f /usr/lib/libgtest.a ]; then
-              cd /usr/src/gtest
-              sudo cmake .
-              sudo make
-              sudo cp *.a /usr/lib
-            fi
-          elif [[ "$RUNNER_OS" == "macOS" ]]; then
-            # Avoid running a full `brew update` on runners (can be cancelled / slow).
-            # Disable Homebrew's auto-update and retry installs to be resilient to transient failures.
-            export HOMEBREW_NO_AUTO_UPDATE=1
-            for i in 1 2 3; do
-              HOMEBREW_NO_AUTO_UPDATE=1 brew install cmake ninja openvdb tbb vtk && break || sleep 5
-            done
+          conda env create -f environment.yml
+          # Ensure conda is available in this shell and activate the env
+          source "$(conda info --base)/etc/profile.d/conda.sh"
+          conda activate cxxgeom
+          # Run any post-link script to build additional components (OpenVDB, VMTK) as in README
+          if [ -f .conda/post-link.sh ]; then
+            bash .conda/post-link.sh
           fi
 
       # 3️⃣ Configure (CMake)
@@ -51,14 +49,25 @@ jobs:
           rm -rf CMakeFiles
 
       - name: Configure CMake
-        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+        shell: bash -l {0}
+        run: |
+          source "$(conda info --base)/etc/profile.d/conda.sh"
+          conda activate cxxgeom
+          cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
 
       # 4️⃣ Build (Ninja)
       - name: Build
-        run: cmake --build build --config Release
+        shell: bash -l {0}
+        run: |
+          source "$(conda info --base)/etc/profile.d/conda.sh"
+          conda activate cxxgeom
+          cmake --build build --config Release
 
       # 5️⃣ Run Tests (CTest)
       - name: Run unit tests
+        shell: bash -l {0}
         run: |
+          source "$(conda info --base)/etc/profile.d/conda.sh"
+          conda activate cxxgeom
           cd build
           ctest --output-on-failure --verbose
