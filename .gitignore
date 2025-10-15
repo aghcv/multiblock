@@ -1,0 +1,89 @@
+# Build directories
+/build/
+
+# CMake generated files
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/install_manifest.txt
+/Makefile
+/compile_commands.json
+
+# FetchContent/_deps build directories (common places for downloaded deps)
+/_deps/
+/build/_deps/
+
+# Compiled object files, libraries, binaries
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Linker files
+*.ilk
+*.pdb
+
+# Coverage and profiling
+*.gcda
+*.gcno
+coverage.info
+
+# Test temporary output
+/Testing/Temporary/
+
+# Editor/IDE files
+/.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Xcode
+*.xcworkspace
+*.xcodeproj
+*.xcuserdatad
+*.xcuserstate
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xccheckout
+*.moved-aside
+*.xcscmblueprint
+*.xccheckout
+*.xcodeproj/xcuserdata/
+*.dSYM/
+
+# macOS
+.DS_Store
+
+# Swap / temporary files
+*~
+*.swp
+*.swo
+
+# Python artifacts (if any)
+__pycache__/
+*.py[cod]
+*.pyo
+env/
+venv/
+.env
+
+# Conda environment folders (common names)
+envs/
+conda-env/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Misc
+tags
+TAGS
+*.tar.gz
+*.zip

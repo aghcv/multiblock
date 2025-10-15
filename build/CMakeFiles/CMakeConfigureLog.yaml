@@ -37,6 +37,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     searched_directories:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/uname"
@@ -65,6 +66,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "message-v1"
@@ -111,6 +113,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     searched_directories:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/ninja-build"
@@ -133,6 +136,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -171,6 +175,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     found: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++"
     search_context:
@@ -191,6 +196,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -235,6 +241,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "message-v1"
@@ -334,6 +341,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     found: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-ar"
     search_context:
@@ -354,6 +362,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -392,6 +401,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     searched_directories:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-ranlib"
@@ -408,6 +418,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-ranlib"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-ranlib"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-ranlib"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-ranlib"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-ranlib"
     found: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/llvm-ranlib"
     search_context:
@@ -428,6 +439,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -464,6 +476,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     found: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-strip"
     search_context:
@@ -484,6 +497,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -520,6 +534,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     found: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-ld"
     search_context:
@@ -540,6 +555,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -578,6 +594,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     searched_directories:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-nm"
@@ -594,6 +611,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-nm"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-nm"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-nm"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-nm"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-nm"
     found: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/llvm-nm"
     search_context:
@@ -614,6 +632,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -652,6 +671,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     searched_directories:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-objdump"
@@ -668,6 +688,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-objdump"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-objdump"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-objdump"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-objdump"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-objdump"
     found: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/llvm-objdump"
     search_context:
@@ -688,6 +709,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -726,6 +748,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     searched_directories:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-objcopy"
@@ -742,6 +765,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-objcopy"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-objcopy"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-objcopy"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-objcopy"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-objcopy"
     found: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/llvm-objcopy"
     search_context:
@@ -762,6 +786,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -800,6 +825,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     searched_directories:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-readelf"
@@ -816,6 +842,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-readelf"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-readelf"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-readelf"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-readelf"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-readelf"
     found: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/llvm-readelf"
     search_context:
@@ -836,6 +863,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -874,6 +902,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     searched_directories:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-dlltool"
@@ -890,6 +919,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-dlltool"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-dlltool"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-dlltool"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-dlltool"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-dlltool"
     found: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/llvm-dlltool"
     search_context:
@@ -910,6 +940,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -948,6 +979,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     searched_directories:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-addr2line"
@@ -964,6 +996,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-addr2line"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-addr2line"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-addr2line"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-addr2line"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-addr2line"
     found: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/llvm-addr2line"
     search_context:
@@ -984,6 +1017,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -1020,6 +1054,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     searched_directories:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-tapi"
@@ -1036,6 +1071,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-tapi"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-tapi"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-tapi"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-tapi"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-tapi"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/tapi"
       - "/opt/homebrew/bin/tapi"
@@ -1051,6 +1087,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/tapi"
       - "/Library/Apple/usr/bin/tapi"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/tapi"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/tapi"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
     found: false
     search_context:
@@ -1071,6 +1108,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -1109,6 +1147,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     searched_directories:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-ar-19.1"
@@ -1125,6 +1164,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-ar-19.1"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-ar-19.1"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-ar-19.1"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-ar-19.1"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-ar-19.1"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-ar-19"
       - "/opt/homebrew/bin/arm64-apple-darwin20.0.0-llvm-ar-19"
@@ -1140,6 +1180,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-ar-19"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-ar-19"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-ar-19"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-ar-19"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-ar-19"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-ar19"
       - "/opt/homebrew/bin/arm64-apple-darwin20.0.0-llvm-ar19"
@@ -1155,6 +1196,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-ar19"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-ar19"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-ar19"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-ar19"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-ar19"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-ar"
       - "/opt/homebrew/bin/arm64-apple-darwin20.0.0-llvm-ar"
@@ -1170,6 +1212,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-ar"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-ar"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-ar"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-ar"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-ar"
     found: false
     search_context:
@@ -1190,6 +1233,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -1228,6 +1272,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     searched_directories:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-ranlib-19.1"
@@ -1244,6 +1289,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-ranlib-19.1"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-ranlib-19.1"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-ranlib-19.1"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-ranlib-19.1"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-ranlib-19.1"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-ranlib-19"
       - "/opt/homebrew/bin/arm64-apple-darwin20.0.0-llvm-ranlib-19"
@@ -1259,6 +1305,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-ranlib-19"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-ranlib-19"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-ranlib-19"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-ranlib-19"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-ranlib-19"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-ranlib19"
       - "/opt/homebrew/bin/arm64-apple-darwin20.0.0-llvm-ranlib19"
@@ -1274,6 +1321,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-ranlib19"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-ranlib19"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-ranlib19"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-ranlib19"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-ranlib19"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-llvm-ranlib"
       - "/opt/homebrew/bin/arm64-apple-darwin20.0.0-llvm-ranlib"
@@ -1289,6 +1337,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-llvm-ranlib"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-llvm-ranlib"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-llvm-ranlib"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-llvm-ranlib"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-llvm-ranlib"
     found: false
     search_context:
@@ -1309,6 +1358,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -1347,6 +1397,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     searched_directories:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang-scan-deps-19.1"
@@ -1363,6 +1414,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-clang-scan-deps-19.1"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-clang-scan-deps-19.1"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-clang-scan-deps-19.1"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-clang-scan-deps-19.1"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-clang-scan-deps-19.1"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang-scan-deps-19"
       - "/opt/homebrew/bin/arm64-apple-darwin20.0.0-clang-scan-deps-19"
@@ -1378,6 +1430,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-clang-scan-deps-19"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-clang-scan-deps-19"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-clang-scan-deps-19"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-clang-scan-deps-19"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-clang-scan-deps-19"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang-scan-deps19"
       - "/opt/homebrew/bin/arm64-apple-darwin20.0.0-clang-scan-deps19"
@@ -1393,6 +1446,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-clang-scan-deps19"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-clang-scan-deps19"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-clang-scan-deps19"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-clang-scan-deps19"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-clang-scan-deps19"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang-scan-deps"
       - "/opt/homebrew/bin/arm64-apple-darwin20.0.0-clang-scan-deps"
@@ -1408,6 +1462,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm64-apple-darwin20.0.0-clang-scan-deps"
       - "/Library/Apple/usr/bin/arm64-apple-darwin20.0.0-clang-scan-deps"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/arm64-apple-darwin20.0.0-clang-scan-deps"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/arm64-apple-darwin20.0.0-clang-scan-deps"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/arm64-apple-darwin20.0.0-clang-scan-deps"
     found: false
     search_context:
@@ -1428,6 +1483,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
   -
     kind: "find-v1"
@@ -1466,6 +1522,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
     found: "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/install_name_tool"
     search_context:
@@ -1486,6 +1543,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
   -
@@ -1497,8 +1555,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DCIkfC"
-      binary: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DCIkfC"
+      source: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DYf9GA"
+      binary: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DYf9GA"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_CXX_FLAGS: "-ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include"
@@ -1512,17 +1570,17 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DCIkfC'
+        Change Dir: '/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DYf9GA'
         
-        Run Build Command(s): /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/ninja -v cmTC_3112f
-        [1/2] /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/ninja -v cmTC_b3da7
+        [1/2] /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
         clang version 19.1.7
         Target: arm64-apple-darwin20.0.0
         Thread model: posix
         InstalledDir: /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin
         arm64-apple-darwin20.0: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
          (in-process)
-         "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/clang-19" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=26.0 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DCIkfC -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DCIkfC -resource-dir /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19 -dependency-file CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
+         "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/clang-19" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=26.0 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DYf9GA -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DYf9GA -resource-dir /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19 -dependency-file CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 19.1.7 based upon LLVM 19.1.7 default target arm64-apple-darwin24.6.0
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
@@ -1534,12 +1592,12 @@ events:
          /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
          /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        [2/2] : && /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v -Wl,-v CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_3112f   && :
+        [2/2] : && /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v -Wl,-v CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_b3da7   && :
         clang version 19.1.7
         Target: arm64-apple-darwin20.0.0
         Thread model: posix
         InstalledDir: /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin
-         "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/libLTO.19.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 26.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_3112f -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/lib/darwin/libclang_rt.osx.a
+         "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/libLTO.19.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 26.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_b3da7 -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld  PROJECT:ld64-955.13
         BUILD 20:57:23 Oct  5 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em riscv32 (tvOS)
@@ -1591,17 +1649,17 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DCIkfC']
+        ignore line: [Change Dir: '/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DYf9GA']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/ninja -v cmTC_3112f]
-        ignore line: [[1/2] /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/ninja -v cmTC_b3da7]
+        ignore line: [[1/2] /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang version 19.1.7]
         ignore line: [Target: arm64-apple-darwin20.0.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin]
         ignore line: [arm64-apple-darwin20.0: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ (in-process)]
-        ignore line: [ "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/clang-19" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=26.0 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DCIkfC -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DCIkfC -resource-dir /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19 -dependency-file CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/clang-19" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=26.0 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DYf9GA -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-DYf9GA -resource-dir /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19 -dependency-file CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 19.1.7 based upon LLVM 19.1.7 default target arm64-apple-darwin24.6.0]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"]
@@ -1613,12 +1671,12 @@ events:
         ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
         ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [[2/2] : && /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v -Wl -v CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_3112f   && :]
+        ignore line: [[2/2] : && /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v -Wl -v CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_b3da7   && :]
         ignore line: [clang version 19.1.7]
         ignore line: [Target: arm64-apple-darwin20.0.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin]
-        link line: [ "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/libLTO.19.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 26.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_3112f -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/libLTO.19.1.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 26.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_b3da7 -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -v CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/lib/darwin/libclang_rt.osx.a]
           arg [/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1635,7 +1693,7 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_3112f] ==> ignore
+          arg [cmTC_b3da7] ==> ignore
           arg [-L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib] ==> dir [/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
@@ -1644,7 +1702,7 @@ events:
           arg [-rpath] ==> ignore
           arg [/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_3112f.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_b3da7.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/clang/19/lib/darwin/libclang_rt.osx.a]
@@ -1750,6 +1808,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -1792,8 +1851,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-VBlJgF"
-      binary: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-VBlJgF"
+      source: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-bIpK3i"
+      binary: "/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-bIpK3i"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_CXX_FLAGS: "-ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include"
@@ -1807,11 +1866,11 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-VBlJgF'
+        Change Dir: '/Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-bIpK3i'
         
-        Run Build Command(s): /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/ninja -v cmTC_646c9
-        [1/2] /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -DCMAKE_HAVE_LIBC_PTHREAD  -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_646c9.dir/src.cxx.o -MF CMakeFiles/cmTC_646c9.dir/src.cxx.o.d -o CMakeFiles/cmTC_646c9.dir/src.cxx.o -c /Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-VBlJgF/src.cxx
-        [2/2] : && /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib CMakeFiles/cmTC_646c9.dir/src.cxx.o -o cmTC_646c9   && :
+        Run Build Command(s): /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/ninja -v cmTC_917db
+        [1/2] /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -DCMAKE_HAVE_LIBC_PTHREAD  -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_917db.dir/src.cxx.o -MF CMakeFiles/cmTC_917db.dir/src.cxx.o.d -o CMakeFiles/cmTC_917db.dir/src.cxx.o -c /Users/aghorban/code/multiblock/build/CMakeFiles/CMakeScratch/TryCompile-bIpK3i/src.cxx
+        [2/2] : && /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib -L/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib CMakeFiles/cmTC_917db.dir/src.cxx.o -o cmTC_917db   && :
         
       exitCode: 0
   -
@@ -1898,6 +1957,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -1984,6 +2044,8 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/utf8cpp/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/utf8cpp/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/utf8cpp/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/utf8cpp/"
@@ -2066,6 +2128,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -2150,6 +2213,8 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/include/"
@@ -2234,6 +2299,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -2304,6 +2370,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
@@ -2342,6 +2409,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -2413,6 +2481,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
@@ -2565,6 +2634,15 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
@@ -2731,6 +2809,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -2840,6 +2919,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -2944,6 +3024,9 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/eigen3/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/eigen/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/eigen3/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/eigen/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/eigen3/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/eigen/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
@@ -3053,6 +3136,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -3123,6 +3207,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/bin/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/sbin/"
@@ -3195,6 +3280,8 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/pkgconf"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/pkg-config"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/pkgconf"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/pkg-config"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/pkgconf"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/pkg-config"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/pkgconf"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/bin/pkg-config"
@@ -3279,6 +3366,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -3335,6 +3423,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
@@ -3386,6 +3475,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -3449,6 +3539,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
@@ -3484,6 +3575,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -3550,6 +3642,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
@@ -3601,6 +3694,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -3664,6 +3758,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
@@ -3699,6 +3794,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -3765,6 +3861,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
@@ -3816,6 +3913,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -3879,6 +3977,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
@@ -3914,6 +4013,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -4020,6 +4120,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -4102,6 +4203,8 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/double-conversion/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/double-conversion/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/double-conversion/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/double-conversion/"
@@ -4182,6 +4285,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -4244,6 +4348,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
@@ -4279,6 +4384,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -4410,6 +4516,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -4510,6 +4617,9 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
@@ -4655,6 +4765,9 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/openvdb.framework/Headers/version.h"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/openvdb.framework/Headers/version.h"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/openvdb.framework/Headers/version.h"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/openvdb.framework/Headers/version.h"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/openvdb.framework/Headers/version.h"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/openvdb.framework/Headers/version.h"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/openvdb.framework/Headers/version.h"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/openvdb.framework/Headers/version.h"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/openvdb.framework/Headers/version.h"
@@ -4774,6 +4887,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -4835,6 +4949,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
@@ -4876,6 +4991,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -4977,6 +5093,9 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
@@ -5119,6 +5238,9 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/tbb.framework/Headers/tbb_stddef.h"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/tbb.framework/Headers/tbb_stddef.h"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/tbb.framework/Headers/tbb_stddef.h"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/tbb.framework/Headers/tbb_stddef.h"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/tbb.framework/Headers/tbb_stddef.h"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/tbb.framework/Headers/tbb_stddef.h"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/tbb.framework/Headers/tbb_stddef.h"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/tbb.framework/Headers/tbb_stddef.h"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/tbb.framework/Headers/tbb_stddef.h"
@@ -5260,6 +5382,9 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/tbb/tbb_stddef.h"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/tbb/tbb_stddef.h"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/tbb/tbb_stddef.h"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/tbb/tbb_stddef.h"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/tbb/tbb_stddef.h"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/tbb/tbb_stddef.h"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/tbb/tbb_stddef.h"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/tbb/tbb_stddef.h"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/tbb/tbb_stddef.h"
@@ -5368,6 +5493,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -5469,6 +5595,9 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
@@ -5611,6 +5740,9 @@ events:
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/oneapi.framework/Headers/tbb/version.h"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/include/oneapi.framework/Headers/tbb/version.h"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/oneapi.framework/Headers/tbb/version.h"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/oneapi.framework/Headers/tbb/version.h"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/include/oneapi.framework/Headers/tbb/version.h"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/oneapi.framework/Headers/tbb/version.h"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/oneapi.framework/Headers/tbb/version.h"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/oneapi.framework/Headers/tbb/version.h"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/oneapi.framework/Headers/tbb/version.h"
@@ -5727,6 +5859,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -5790,6 +5923,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
@@ -5832,6 +5966,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -5895,6 +6030,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
@@ -5931,6 +6067,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
@@ -5971,6 +6108,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -6085,6 +6223,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -6199,6 +6338,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -6312,6 +6452,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -6425,6 +6566,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -6537,6 +6679,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -6756,6 +6899,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -6828,6 +6972,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -6890,6 +7035,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
@@ -6932,6 +7078,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -6994,6 +7141,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
@@ -7030,6 +7178,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
@@ -7070,6 +7219,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -7132,6 +7282,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
@@ -7174,6 +7325,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -7236,6 +7388,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
@@ -7272,6 +7425,7 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin/"
       - "/opt/homebrew/Caskroom/miniconda/base/condabin/"
+      - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
       - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
@@ -7312,6 +7466,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -7430,6 +7585,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -7575,6 +7731,14 @@ events:
         mode: "config"
         reason: "no_exist"
       -
+        path: "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/VMTKConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts/vmtk-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
         path: "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/VMTKConfig.cmake"
         mode: "config"
         reason: "no_exist"
@@ -7659,6 +7823,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -7692,7 +7857,7 @@ events:
     kind: "find_package-v1"
     backtrace:
       - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/cmake-4.1/Modules/FindGTest.cmake:337 (find_package)"
-      - "CMakeLists.txt:148 (find_package)"
+      - "CMakeLists.txt:150 (find_package)"
     name: "GTest"
     configs:
       -
@@ -7764,6 +7929,7 @@ events:
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/bin"
         - "/opt/homebrew/Caskroom/miniconda/base/condabin"
+        - "/Users/aghorban/.vscode/extensions/ms-python.debugpy-2025.14.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/aghorban/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:

@@ -145,13 +145,25 @@ vtk_module_autoinit(
 enable_testing()
 
 # Add GoogleTest (if installed via conda or system package)
+# Add GoogleTest (try system package first, otherwise fetch googletest)
+include(FetchContent)
 find_package(GTest QUIET)
 if(GTest_FOUND)
-    message(STATUS "✅ Found GTest: ${GTest_DIR}")
-    add_subdirectory(tests)           # <-- include your tests/ directory
+    message(STATUS "Found GTest: ${GTest_DIR}")
 else()
-    message(WARNING "⚠️ GTest not found — skipping tests build.")
+    message(STATUS "GTest not found; Fetching googletest via FetchContent...")
+    # Use a known googletest release
+    FetchContent_Declare(
+        googletest
+        URL https://github.com/google/googletest/archive/refs/tags/release-1.12.1.zip
+    )
+    # Recommended to avoid overriding MSVC runtime on Windows
+    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+    FetchContent_MakeAvailable(googletest)
 endif()
+
+# Now add the tests/ directory (it links to GTest::gtest_main)
+add_subdirectory(tests)
 
 # ------------------------------------------------------------
 # ✅ (Optional) Add Examples

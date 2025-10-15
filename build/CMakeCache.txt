@@ -272,6 +272,19 @@ Eigen3_DIR:PATH=/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/share/eigen3/
 //Eigen include directory
 Eigen3_INCLUDE_DIR:PATH=/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/include/eigen3
 
+//Directory under which to collect all populated content
+FETCHCONTENT_BASE_DIR:PATH=/Users/aghorban/code/multiblock/build/_deps
+
+//Disables all attempts to download or update content and assumes
+// source dirs already exist
+FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
+
+//Enables QUIET option for all content population
+FETCHCONTENT_QUIET:BOOL=ON
+
+//Enables UPDATE_DISCONNECTED behavior for all content population
+FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
 //The directory containing a CMake configuration file for GTest.
 GTest_DIR:PATH=/opt/homebrew/Caskroom/miniconda/base/envs/cxxgeom/lib/cmake/GTest
 
