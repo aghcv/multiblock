@@ -21,20 +21,26 @@ jobs:
         uses: actions/checkout@v4
 
       # 2️⃣ Setup Conda environment (mirror local `environment.yml`)
-      - name: Setup Miniconda
+      - name: Setup Miniconda and create env
         uses: conda-incubator/setup-miniconda@v2
         with:
+          # Ensure the action installs Miniforge on the runner
+          miniforge-version: 'latest'
           auto-update-conda: false
           python-version: 3.11
+          # Automatically create & activate the environment from environment.yml
+          activate-environment: cxxgeom
+          environment-file: environment.yml
+          auto-activate-base: false
+          run-post: false
 
-      - name: Create and activate conda env
+      - name: Run post-install script (if present)
+        if: always()
         shell: bash -l {0}
         run: |
-          conda env create -f environment.yml
-          # Ensure conda is available in this shell and activate the env
+          # Ensure the conda env is active in this shell
           source "$(conda info --base)/etc/profile.d/conda.sh"
           conda activate cxxgeom
-          # Run any post-link script to build additional components (OpenVDB, VMTK) as in README
           if [ -f .conda/post-link.sh ]; then
             bash .conda/post-link.sh
           fi
