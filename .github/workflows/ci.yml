@@ -21,26 +21,54 @@ jobs:
         uses: actions/checkout@v4
 
       # 2️⃣ Setup Conda environment (mirror local `environment.yml`)
-      - name: Setup Miniconda and create env
+      - name: Setup Miniconda
         uses: conda-incubator/setup-miniconda@v2
         with:
-          # Ensure the action installs Miniforge on the runner
           miniforge-version: 'latest'
           auto-update-conda: false
           python-version: 3.11
-          # Automatically create & activate the environment from environment.yml
-          activate-environment: cxxgeom
-          environment-file: environment.yml
           auto-activate-base: false
-          run-post: false
 
-      - name: Run post-install script (if present)
-        if: always()
+      - name: Create conda env with mamba (retry & verbose)
         shell: bash -l {0}
         run: |
-          # Ensure the conda env is active in this shell
+          set -o pipefail
+          source "$(conda info --base)/etc/profile.d/conda.sh"
+          # configure channels similarly to README
+          conda config --set channel_priority strict
+          conda config --add channels conda-forge
+
+          echo "Listing conda info and base packages"
+          conda info
+          conda list
+
+          # Use mamba (if present) for faster, more robust solves; retry on failure
+          CREATE_CMD="mamba env create -f environment.yml -n cxxgeom"
+          echo "Running: $CREATE_CMD"
+          for i in 1 2 3; do
+            if $CREATE_CMD 2>&1 | tee create_env.log; then
+              echo "mamba env create succeeded"
+              break
+            else
+              echo "mamba env create failed (attempt $i)"
+              tail -n +1 create_env.log | sed -n '1,200p'
+              sleep $((i * 5))
+              if [ "$i" -eq 3 ]; then
+                echo "mamba failed after 3 attempts, falling back to conda env create"
+                conda env create -f environment.yml -n cxxgeom 2>&1 | tee create_env_conda.log || true
+              fi
+            fi
+          done
+
+      - name: Activate env and run post-link (if present)
+        shell: bash -l {0}
+        run: |
           source "$(conda info --base)/etc/profile.d/conda.sh"
           conda activate cxxgeom
+          echo "Conda envs:"
+          conda info --envs
+          echo "Listing cxxgeom packages (trimmed)"
+          conda list -n cxxgeom | sed -n '1,200p'
           if [ -f .conda/post-link.sh ]; then
             bash .conda/post-link.sh
           fi
