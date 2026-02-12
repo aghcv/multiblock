@@ -1,5 +1,5 @@
 # Results
-feature=cpu_accelerated
+feature=default
 mode=run
 cpu_logical=14
 cpu_physical=14
@@ -7,13 +7,13 @@ gpus=1
 gpu_cores=32
 work_items=5000000
 inner_iters=64
-cpu_threads=14
+cpu_threads=1
 num_gpus=0
 obj_path=raw/geometry.vtp
 blocks=7
 closed_surfaces=0
 blocks_with_openings=0
 boundary_edge_cells=0
-time_s=20.014135
-blocks_per_s=0.35
+time_s=22.948822
+blocks_per_s=0.31
 checksum=0.000000
