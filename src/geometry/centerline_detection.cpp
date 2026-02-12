@@ -105,6 +105,7 @@ vtkSmartPointer<vtkPolyData> CombineRegionSurfaces(vtkMultiBlockDataSet* regionM
 	return merged;
 }
 
+
 struct VoxelizationParams {
 	int baseResolution = 64;
 	int maxDepth = 6;
@@ -125,10 +126,14 @@ VoxelState ClassifyLeaf(double dist, double cellSize) {
 	return VoxelState::On;
 }
 
-void EnsureArraySize(vtkDataArray* arr, vtkIdType idx) {
+void EnsureArraySize(vtkDataArray* arr, vtkIdType idx, double defaultValue = 0.0) {
 	if (!arr) return;
-	if (idx < arr->GetNumberOfTuples()) return;
+	const vtkIdType oldSize = arr->GetNumberOfTuples();
+	if (idx < oldSize) return;
 	arr->SetNumberOfTuples(idx + 1);
+	for (vtkIdType i = oldSize; i <= idx; ++i) {
+		arr->SetComponent(i, 0, defaultValue);
+	}
 }
 
 void RefineHyperTreeCell(
@@ -163,13 +168,13 @@ void RefineHyperTreeCell(
 		return;
 	}
 
-	const VoxelState state = ClassifyLeaf(dist, cellSize);
 	const vtkIdType nodeId = cursor->GetGlobalNodeIndex();
 	if (nodeId == vtkHyperTreeGrid::InvalidIndex || nodeId < 0) {
 		return;
 	}
-	EnsureArraySize(stateArray, nodeId);
-	EnsureArraySize(levelArray, nodeId);
+	const VoxelState state = ClassifyLeaf(dist, cellSize);
+	EnsureArraySize(stateArray, nodeId, static_cast<double>(VoxelState::Outside));
+	EnsureArraySize(levelArray, nodeId, 0.0);
 	stateArray->SetValue(nodeId, static_cast<unsigned char>(state));
 	levelArray->SetValue(nodeId, depth);
 }
@@ -178,6 +183,7 @@ vtkSmartPointer<vtkHyperTreeGrid> VoxelizeRegionAdaptiveHTG(
 	vtkPolyData* surface,
 	const VoxelizationParams& params) {
 	if (!surface || surface->GetNumberOfCells() == 0) return nullptr;
+
 
 	double bounds[6] = {0, 0, 0, 0, 0, 0};
 	surface->GetBounds(bounds);
@@ -231,6 +237,7 @@ vtkSmartPointer<vtkHyperTreeGrid> VoxelizeRegionAdaptiveHTG(
 		if (!cursor->HasTree()) continue;
 		RefineHyperTreeCell(cursor, implicit, 0, params.maxDepth, stateArray, levelArray);
 	}
+
 
 	grid->GetCellData()->AddArray(stateArray);
 	grid->GetCellData()->AddArray(levelArray);

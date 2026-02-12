@@ -18,6 +18,7 @@ find_package(VTK REQUIRED COMPONENTS
     IOLegacy
     IOGeometry
     FiltersCore
+    FiltersModeling
     FiltersGeometry
     RenderingCore
     RenderingOpenGL2
@@ -43,6 +44,7 @@ target_link_libraries(multiblock_lib PUBLIC
     VTK::IOLegacy
     VTK::IOGeometry
     VTK::FiltersCore
+    VTK::FiltersModeling
     VTK::FiltersGeometry
     VTK::RenderingCore
     VTK::RenderingOpenGL2
@@ -52,7 +54,7 @@ add_executable(multiblock src/app/app_main.cpp)
 target_include_directories(multiblock PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_link_libraries(multiblock PRIVATE multiblock_lib
     VTK::CommonCore VTK::CommonDataModel VTK::IOImport VTK::IOXML VTK::IOLegacy VTK::IOGeometry
-    VTK::FiltersCore VTK::FiltersGeometry VTK::RenderingCore VTK::RenderingOpenGL2)
+    VTK::FiltersCore VTK::FiltersModeling VTK::FiltersGeometry VTK::RenderingCore VTK::RenderingOpenGL2)
 
 set_target_properties(multiblock PROPERTIES
     SUFFIX ".mbx"
@@ -60,6 +62,6 @@ set_target_properties(multiblock PROPERTIES
 
 vtk_module_autoinit(TARGETS multiblock multiblock_lib MODULES
     VTK::CommonCore VTK::CommonDataModel VTK::IOImport VTK::IOXML VTK::IOLegacy VTK::IOGeometry
-    VTK::FiltersCore VTK::FiltersGeometry VTK::RenderingCore VTK::RenderingOpenGL2)
+    VTK::FiltersCore VTK::FiltersModeling VTK::FiltersGeometry VTK::RenderingCore VTK::RenderingOpenGL2)
 
 # No unit tests on the 'light' branch
