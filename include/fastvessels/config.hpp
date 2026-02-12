@@ -33,6 +33,10 @@ struct SolverConfig {
 	int repetitions = 3;
 	bool unify_walls = false;
 	int max_centerline_xlets = 25;
+
+	int voxel_base_resolution = 32;
+	int voxel_max_depth = 4;
+	int voxel_inside_refine_dist = 2;
 };
 
 struct FeatureSpec {

@@ -145,6 +145,18 @@ void ApplyConfigOverrides(SolverConfig& config, const std::unordered_map<std::st
 	if (it != values.end() && !it->second.empty()) {
 		config.max_centerline_xlets = static_cast<int>(std::max(1LL, ParseInt(it->second, config.max_centerline_xlets)));
 	}
+	it = values.find("voxel_base_resolution");
+	if (it != values.end() && !it->second.empty()) {
+		config.voxel_base_resolution = static_cast<int>(std::max(4LL, ParseInt(it->second, config.voxel_base_resolution)));
+	}
+	it = values.find("voxel_max_depth");
+	if (it != values.end() && !it->second.empty()) {
+		config.voxel_max_depth = static_cast<int>(std::max(0LL, ParseInt(it->second, config.voxel_max_depth)));
+	}
+	it = values.find("voxel_inside_refine_dist");
+	if (it != values.end() && !it->second.empty()) {
+		config.voxel_inside_refine_dist = static_cast<int>(std::max(1LL, ParseInt(it->second, config.voxel_inside_refine_dist)));
+	}
 }
 
 SolverConfig LoadConfig(const std::string& path, const SolverConfig& defaults) {
@@ -199,6 +211,9 @@ void WriteConfigFile(const std::string& path,
 	out << "repetitions=" << config.repetitions << "\n\n";
 	out << "unify_walls=" << (config.unify_walls ? "true" : "false") << "\n\n";
 	out << "max_centerline_xlets=" << config.max_centerline_xlets << "\n\n";
+	out << "voxel_base_resolution=" << config.voxel_base_resolution << "\n";
+	out << "voxel_max_depth=" << config.voxel_max_depth << "\n";
+	out << "voxel_inside_refine_dist=" << config.voxel_inside_refine_dist << "\n\n";
 
 	out << "cpu_threads=" << config.cpu_threads << "\n";
 	out << "min_cpu_for_gpu=" << config.min_cpu_for_gpu << "\n";

@@ -27,6 +27,7 @@ add_library(multiblock_lib STATIC
     src/model/common.cpp
     src/model/env_info.cpp
     src/model/config.cpp
+    src/geometry/centerline_detection.cpp
     src/geometry/mblock_util.cpp
     src/geometry/io_utils.cpp
     src/simulation/solver.cpp

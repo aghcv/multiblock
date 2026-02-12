@@ -527,7 +527,6 @@ void AnalyzeRegionGroupSurfaces(vtkMultiBlockDataSet* regions, int maxRegionThre
 			  << std::endl;
 }
 
-
 static void SetBlockName(vtkMultiBlockDataSet* mb, unsigned int idx, const std::string& name) {
 	if (!mb) return;
 	vtkInformation* info = mb->GetMetaData(idx);
