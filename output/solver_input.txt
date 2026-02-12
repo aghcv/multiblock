@@ -21,6 +21,10 @@ unify_walls=false
 
 max_centerline_xlets=25
 
+voxel_base_resolution=16
+voxel_max_depth=6
+voxel_inside_refine_dist=2
+
 cpu_threads=0
 min_cpu_for_gpu=1
 num_gpus=-1
