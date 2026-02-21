@@ -76,10 +76,28 @@ static BenchmarkResult RunBenchmarkOnce(const SolverConfig& config, const CpuInf
 
 	auto start = std::chrono::steady_clock::now();
 
-	auto blocks = ReadGeometry_AsMultiBlock(config.obj_path);
-	auto refined = BuildRegionSurfaceHierarchy(blocks, "GroupId", "RegionId", true);
-	AnalyzeRegionGroupSurfaces(refined, runtime.cpu_threads, config.unify_walls);
-	CenterlineBase(refined);
+	vtkSmartPointer<vtkMultiBlockDataSet> refined;
+
+	std::cout << "\n=== Reading geometry ===" << std::endl;
+	std::cout << "Geometry path: " << config.obj_path << std::endl;
+	if (std::filesystem::is_directory(config.obj_path)) {
+		std::cout << "Mode: STL directory" << std::endl;
+	} else {
+		std::cout << "Mode: single file" << std::endl;
+	}
+
+	if (std::filesystem::is_directory(config.obj_path)) {
+		auto blocks = ReadStlDirectory_AsMultiBlock(config.obj_path);
+		refined = BuildRegionsFromSurfaceBlocks(blocks);
+	} else {
+		auto blocks = ReadGeometry_AsMultiBlock(config.obj_path);
+		refined = BuildRegionSurfaceHierarchy(blocks, "GroupId", "RegionId", true);
+	}
+	AnalyzeRegionGroupSurfaces(refined, runtime.cpu_threads, config.unify_walls,
+		config.flat_angle_rad, config.wall_detection_mode,
+		config.wall_rank_area_weight, config.wall_rank_flatness_weight,
+		config.wall_rank_connect_weight, config.report_level, config.report_table_rows);
+	CenterlineBase(refined, config.report_level, config.report_table_rows);
 	VoxelizeRegionsBase(refined, config.voxel_base_resolution, config.voxel_max_depth, config.voxel_inside_refine_dist);
 
 	std::filesystem::create_directories("output");

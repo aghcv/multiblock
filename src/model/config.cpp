@@ -45,6 +45,34 @@ std::string JoinFeatureNames() {
 	return joined;
 }
 
+static std::string NormalizeReportLevel(const std::string& value, const std::string& fallback) {
+	if (value.empty()) {
+		return fallback;
+	}
+	const std::string lowered = ToLower(value);
+	if (lowered == "long" || lowered == "detailed" || lowered == "full") {
+		return "long";
+	}
+	if (lowered == "short" || lowered == "brief" || lowered == "minimal") {
+		return "short";
+	}
+	return fallback;
+}
+
+static std::string NormalizeWallDetectionMode(const std::string& value, const std::string& fallback) {
+	if (value.empty()) {
+		return fallback;
+	}
+	const std::string lowered = ToLower(value);
+	if (lowered == "ranked" || lowered == "rank" || lowered == "area_flat_connect") {
+		return "ranked";
+	}
+	if (lowered == "flatness" || lowered == "flat" || lowered == "angle") {
+		return "flatness";
+	}
+	return fallback;
+}
+
 std::unordered_map<std::string, std::string> ReadConfigFile(const std::string& path) {
 	std::unordered_map<std::string, std::string> values;
 	std::ifstream in(path);
@@ -145,6 +173,34 @@ void ApplyConfigOverrides(SolverConfig& config, const std::unordered_map<std::st
 	if (it != values.end() && !it->second.empty()) {
 		config.max_centerline_xlets = static_cast<int>(std::max(1LL, ParseInt(it->second, config.max_centerline_xlets)));
 	}
+	it = values.find("flat_angle_rad");
+	if (it != values.end() && !it->second.empty()) {
+		config.flat_angle_rad = std::max(0.0, ParseDouble(it->second, config.flat_angle_rad));
+	}
+	it = values.find("wall_detection_mode");
+	if (it != values.end() && !it->second.empty()) {
+		config.wall_detection_mode = NormalizeWallDetectionMode(it->second, config.wall_detection_mode);
+	}
+	it = values.find("wall_rank_area_weight");
+	if (it != values.end() && !it->second.empty()) {
+		config.wall_rank_area_weight = std::max(0.0, ParseDouble(it->second, config.wall_rank_area_weight));
+	}
+	it = values.find("wall_rank_flatness_weight");
+	if (it != values.end() && !it->second.empty()) {
+		config.wall_rank_flatness_weight = std::max(0.0, ParseDouble(it->second, config.wall_rank_flatness_weight));
+	}
+	it = values.find("wall_rank_connect_weight");
+	if (it != values.end() && !it->second.empty()) {
+		config.wall_rank_connect_weight = std::max(0.0, ParseDouble(it->second, config.wall_rank_connect_weight));
+	}
+	it = values.find("report_level");
+	if (it != values.end() && !it->second.empty()) {
+		config.report_level = NormalizeReportLevel(it->second, config.report_level);
+	}
+	it = values.find("report_table_rows");
+	if (it != values.end() && !it->second.empty()) {
+		config.report_table_rows = static_cast<int>(std::max(1LL, ParseInt(it->second, config.report_table_rows)));
+	}
 	it = values.find("voxel_base_resolution");
 	if (it != values.end() && !it->second.empty()) {
 		config.voxel_base_resolution = static_cast<int>(std::max(4LL, ParseInt(it->second, config.voxel_base_resolution)));
@@ -211,6 +267,13 @@ void WriteConfigFile(const std::string& path,
 	out << "repetitions=" << config.repetitions << "\n\n";
 	out << "unify_walls=" << (config.unify_walls ? "true" : "false") << "\n\n";
 	out << "max_centerline_xlets=" << config.max_centerline_xlets << "\n\n";
+	out << "flat_angle_rad=" << std::fixed << std::setprecision(3) << config.flat_angle_rad << "\n";
+	out << "wall_detection_mode=" << config.wall_detection_mode << "\n";
+	out << "wall_rank_area_weight=" << std::fixed << std::setprecision(2) << config.wall_rank_area_weight << "\n";
+	out << "wall_rank_flatness_weight=" << std::fixed << std::setprecision(2) << config.wall_rank_flatness_weight << "\n";
+	out << "wall_rank_connect_weight=" << std::fixed << std::setprecision(2) << config.wall_rank_connect_weight << "\n";
+	out << "report_level=" << config.report_level << "\n";
+	out << "report_table_rows=" << config.report_table_rows << "\n\n";
 	out << "voxel_base_resolution=" << config.voxel_base_resolution << "\n";
 	out << "voxel_max_depth=" << config.voxel_max_depth << "\n";
 	out << "voxel_inside_refine_dist=" << config.voxel_inside_refine_dist << "\n\n";

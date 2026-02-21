@@ -1,5 +1,7 @@
 #include "fastvessels/obj_pipeline.hpp"
 
+#include "fastvessels/common.hpp"
+
 #include <vtkAppendPolyData.h>
 #include <vtkCellData.h>
 #include <vtkCompositeDataSet.h>
@@ -26,6 +28,7 @@
 #include <filesystem>
 #include <iomanip>
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <thread>
 #include <vector>
@@ -426,7 +429,9 @@ void WriteHyperTreeGrid(vtkHyperTreeGrid* grid, const std::string& path) {
 
 } // namespace
 
-void CenterlineBase(vtkMultiBlockDataSet* regions) {
+void CenterlineBase(vtkMultiBlockDataSet* regions,
+	const std::string& reportLevel,
+	int reportTableRows) {
 	if (!regions) {
 		std::cerr << "CenterlineBase: regions is null." << std::endl;
 		return;
@@ -439,9 +444,20 @@ void CenterlineBase(vtkMultiBlockDataSet* regions) {
 	}
 
 	const unsigned int hwThreads = std::max(1u, std::thread::hardware_concurrency());
+	const bool detailed = (ToLower(reportLevel) == "long");
+	const int maxRows = std::max(1, reportTableRows);
 	int totalXlets = 0;
 	int totalWalls = 0;
 	int totalUnknown = 0;
+
+	struct SurfaceRow {
+		std::string region;
+		int groupId = -1;
+		int cells = 0;
+		double area = 0.0;
+	};
+	std::vector<SurfaceRow> xletRows;
+	std::vector<SurfaceRow> wallRows;
 
 	for (int r = 0; r < regionCount; ++r) {
 		auto regionMb = vtkMultiBlockDataSet::SafeDownCast(regions->GetBlock(static_cast<unsigned int>(r)));
@@ -455,6 +471,10 @@ void CenterlineBase(vtkMultiBlockDataSet* regions) {
 		int regionUnknown = 0;
 		std::vector<std::pair<int, double>> xletAreas;
 		xletAreas.reserve(static_cast<size_t>(groupCount));
+		const std::string regionName = GetBlockName(regions, static_cast<unsigned int>(r));
+		const std::string regionLabel = regionName.empty()
+			? std::to_string(r)
+			: regionName;
 
 		for (int g = 0; g < groupCount; ++g) {
 			vtkPolyData* pd = vtkPolyData::SafeDownCast(
@@ -463,21 +483,27 @@ void CenterlineBase(vtkMultiBlockDataSet* regions) {
 				continue;
 			}
 			const int surfaceType = GetSurfaceTypeField(pd);
+			const std::string groupName = GetBlockName(regionMb, static_cast<unsigned int>(g));
+			const int groupId = GetGroupId(pd, groupName);
+			const int cellCount = static_cast<int>(pd->GetNumberOfCells());
+			const double area = ComputeSurfaceArea(pd);
 			if (surfaceType == 1) {
 				++regionXlets;
-				const std::string groupName = GetBlockName(regionMb, static_cast<unsigned int>(g));
-				const int groupId = GetGroupId(pd, groupName);
-				const double area = ComputeSurfaceArea(pd);
 				xletAreas.emplace_back(groupId, area);
+				if (detailed) {
+					xletRows.push_back({regionLabel, groupId, cellCount, area});
+				}
 			} else if (surfaceType == 0) {
 				++regionWalls;
+				if (detailed) {
+					wallRows.push_back({regionLabel, groupId, cellCount, area});
+				}
 			} else {
 				++regionUnknown;
 			}
 		}
 
 		const unsigned int cpuIndex = static_cast<unsigned int>(r) % hwThreads;
-		const std::string regionName = GetBlockName(regions, static_cast<unsigned int>(r));
 		std::cout << "CenterlineBase: region "
 				  << (regionName.empty() ? std::to_string(r) : regionName)
 				  << " assigned_cpu=" << cpuIndex
@@ -515,6 +541,51 @@ void CenterlineBase(vtkMultiBlockDataSet* regions) {
 		totalXlets += regionXlets;
 		totalWalls += regionWalls;
 		totalUnknown += regionUnknown;
+	}
+
+	if (detailed) {
+		auto byArea = [](const SurfaceRow& a, const SurfaceRow& b) {
+			return a.area > b.area;
+		};
+		std::sort(xletRows.begin(), xletRows.end(), byArea);
+		std::sort(wallRows.begin(), wallRows.end(), byArea);
+
+		auto formatArea = [](double value) {
+			std::ostringstream oss;
+			oss << std::fixed << std::setprecision(3) << value;
+			return oss.str();
+		};
+		auto buildRows = [&](const std::vector<SurfaceRow>& surfaces) {
+			std::vector<std::vector<std::string>> rows;
+			rows.reserve(surfaces.size());
+			for (const auto& surface : surfaces) {
+				rows.push_back({
+					surface.region,
+					std::to_string(surface.groupId),
+					std::to_string(surface.cells),
+					formatArea(surface.area)
+				});
+			}
+			return rows;
+		};
+
+		const std::vector<std::string> headers = {"Region", "GroupId", "Cells", "Area"};
+		const std::vector<size_t> widths = {12, 10, 8, 12};
+
+		if (!xletRows.empty()) {
+			auto rows = buildRows(xletRows);
+			const size_t shown = std::min<size_t>(rows.size(), static_cast<size_t>(maxRows));
+			std::cout << "CenterlineBase: xlet table (showing " << shown
+					  << " of " << rows.size() << ")\n";
+			std::cout << BuildTextTable(headers, rows, widths, static_cast<size_t>(maxRows));
+		}
+		if (!wallRows.empty()) {
+			auto rows = buildRows(wallRows);
+			const size_t shown = std::min<size_t>(rows.size(), static_cast<size_t>(maxRows));
+			std::cout << "CenterlineBase: wall table (showing " << shown
+					  << " of " << rows.size() << ")\n";
+			std::cout << BuildTextTable(headers, rows, widths, static_cast<size_t>(maxRows));
+		}
 	}
 
 	std::cout << "CenterlineBase: regions=" << regionCount

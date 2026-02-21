@@ -34,6 +34,14 @@ struct SolverConfig {
 	bool unify_walls = false;
 	int max_centerline_xlets = 25;
 
+	double flat_angle_rad = 0.20;
+	std::string wall_detection_mode = "flatness"; // flatness|ranked
+	double wall_rank_area_weight = 0.40;
+	double wall_rank_flatness_weight = 0.40;
+	double wall_rank_connect_weight = 0.20;
+	std::string report_level = "short"; // short|long
+	int report_table_rows = 20;
+
 	int voxel_base_resolution = 32;
 	int voxel_max_depth = 4;
 	int voxel_inside_refine_dist = 2;

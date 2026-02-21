@@ -9,6 +9,10 @@ namespace fastvessels {
 
 vtkSmartPointer<vtkMultiBlockDataSet> ReadGeometry_AsMultiBlock(const std::string& path);
 
+vtkSmartPointer<vtkMultiBlockDataSet> ReadStlDirectory_AsMultiBlock(const std::string& dirPath);
+
+vtkSmartPointer<vtkMultiBlockDataSet> BuildRegionsFromSurfaceBlocks(vtkMultiBlockDataSet* blocks);
+
 struct ObjPipelineStats {
 	int block_count = 0;
 	int closed_surfaces = 0;
@@ -18,9 +22,20 @@ struct ObjPipelineStats {
 
 ObjPipelineStats AnalyzeClosedSurfaces(vtkMultiBlockDataSet* blocks, int cpuThreads);
 
-void AnalyzeRegionGroupSurfaces(vtkMultiBlockDataSet* regions, int maxRegionThreads, bool unifyWalls);
+void AnalyzeRegionGroupSurfaces(vtkMultiBlockDataSet* regions,
+	int maxRegionThreads,
+	bool unifyWalls,
+	double flatAngleRad,
+	const std::string& wallDetectionMode,
+	double wallRankAreaWeight,
+	double wallRankFlatnessWeight,
+	double wallRankConnectWeight,
+	const std::string& reportLevel,
+	int reportTableRows);
 
-void CenterlineBase(vtkMultiBlockDataSet* regions);
+void CenterlineBase(vtkMultiBlockDataSet* regions,
+	const std::string& reportLevel,
+	int reportTableRows);
 
 void VoxelizeRegionsBase(vtkMultiBlockDataSet* regions, int baseResolution, int maxDepth, int insideRefineDist);
 

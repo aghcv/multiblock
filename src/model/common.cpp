@@ -2,6 +2,8 @@
 
 #include <algorithm>
 #include <cctype>
+#include <numeric>
+#include <sstream>
 
 namespace fastvessels {
 
@@ -57,6 +59,61 @@ double ParseDouble(const std::string& value, double defaultValue) {
 	} catch (...) {
 		return defaultValue;
 	}
+}
+
+static std::string TruncateOrPad(const std::string& value, size_t width) {
+	if (width == 0) {
+		return "";
+	}
+	if (value.size() > width) {
+		if (width <= 3) {
+			return value.substr(0, width);
+		}
+		return value.substr(0, width - 3) + "...";
+	}
+	if (value.size() < width) {
+		return value + std::string(width - value.size(), ' ');
+	}
+	return value;
+}
+
+std::string BuildTextTable(const std::vector<std::string>& headers,
+	const std::vector<std::vector<std::string>>& rows,
+	const std::vector<size_t>& columnWidths,
+	size_t maxRows) {
+	if (columnWidths.empty() || headers.empty() || headers.size() != columnWidths.size()) {
+		return "";
+	}
+	const size_t colCount = columnWidths.size();
+	const size_t rowCount = rows.size();
+	const size_t showRows = std::min(maxRows, rowCount);
+	const size_t rowWidth = std::accumulate(columnWidths.begin(), columnWidths.end(), size_t{0}) + (colCount - 1);
+	std::string output;
+	output.reserve((showRows + 2) * (rowWidth + 1));
+
+	auto appendRow = [&](const std::vector<std::string>& cols) {
+		for (size_t i = 0; i < colCount; ++i) {
+			const std::string value = (i < cols.size() ? cols[i] : "");
+			output += TruncateOrPad(value, columnWidths[i]);
+			if (i + 1 < colCount) {
+				output.push_back(' ');
+			}
+		}
+		output.push_back('\n');
+	};
+
+	appendRow(headers);
+	std::vector<std::string> sep(colCount);
+	for (size_t i = 0; i < colCount; ++i) {
+		sep[i] = std::string(columnWidths[i], '-');
+	}
+	appendRow(sep);
+
+	for (size_t r = 0; r < showRows; ++r) {
+		appendRow(rows[r]);
+	}
+
+	return output;
 }
 
 std::uint64_t SplitWorkBegin(std::uint64_t total, int partIndex, int partCount) {
