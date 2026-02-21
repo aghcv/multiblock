@@ -193,6 +193,22 @@ void ApplyConfigOverrides(SolverConfig& config, const std::unordered_map<std::st
 	if (it != values.end() && !it->second.empty()) {
 		config.wall_rank_connect_weight = std::max(0.0, ParseDouble(it->second, config.wall_rank_connect_weight));
 	}
+	it = values.find("global_htg");
+	if (it != values.end() && !it->second.empty()) {
+		config.global_htg = ParseBool(it->second, config.global_htg);
+	}
+	it = values.find("global_htg_output");
+	if (it != values.end() && !it->second.empty()) {
+		config.global_htg_output = it->second;
+	}
+	it = values.find("global_htg_force_single_label");
+	if (it != values.end() && !it->second.empty()) {
+		config.global_htg_force_single_label = ParseBool(it->second, config.global_htg_force_single_label);
+	}
+	it = values.find("region_htg");
+	if (it != values.end() && !it->second.empty()) {
+		config.region_htg = ParseBool(it->second, config.region_htg);
+	}
 	it = values.find("report_level");
 	if (it != values.end() && !it->second.empty()) {
 		config.report_level = NormalizeReportLevel(it->second, config.report_level);
@@ -274,6 +290,10 @@ void WriteConfigFile(const std::string& path,
 	out << "wall_rank_connect_weight=" << std::fixed << std::setprecision(2) << config.wall_rank_connect_weight << "\n";
 	out << "report_level=" << config.report_level << "\n";
 	out << "report_table_rows=" << config.report_table_rows << "\n\n";
+	out << "global_htg=" << (config.global_htg ? "true" : "false") << "\n";
+	out << "global_htg_output=" << config.global_htg_output << "\n";
+	out << "global_htg_force_single_label=" << (config.global_htg_force_single_label ? "true" : "false") << "\n\n";
+	out << "region_htg=" << (config.region_htg ? "true" : "false") << "\n\n";
 	out << "voxel_base_resolution=" << config.voxel_base_resolution << "\n";
 	out << "voxel_max_depth=" << config.voxel_max_depth << "\n";
 	out << "voxel_inside_refine_dist=" << config.voxel_inside_refine_dist << "\n\n";

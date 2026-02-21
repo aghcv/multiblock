@@ -42,6 +42,11 @@ struct SolverConfig {
 	std::string report_level = "short"; // short|long
 	int report_table_rows = 20;
 
+	bool global_htg = false;
+	std::string global_htg_output = "output/centerline_voxels/regions_global.vth";
+	bool global_htg_force_single_label = true;
+	bool region_htg = true;
+
 	int voxel_base_resolution = 32;
 	int voxel_max_depth = 4;
 	int voxel_inside_refine_dist = 2;

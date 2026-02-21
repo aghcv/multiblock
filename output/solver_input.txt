@@ -29,6 +29,11 @@ wall_rank_connect_weight=0.20
 report_level=long
 report_table_rows=20
 
+global_htg=true
+global_htg_output=output/centerline_voxels/regions_global.vth
+global_htg_force_single_label=true
+region_htg=false
+
 voxel_base_resolution=16
 voxel_max_depth=7
 voxel_inside_refine_dist=2

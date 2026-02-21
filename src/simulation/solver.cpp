@@ -98,7 +98,9 @@ static BenchmarkResult RunBenchmarkOnce(const SolverConfig& config, const CpuInf
 		config.wall_rank_area_weight, config.wall_rank_flatness_weight,
 		config.wall_rank_connect_weight, config.report_level, config.report_table_rows);
 	CenterlineBase(refined, config.report_level, config.report_table_rows);
-	VoxelizeRegionsBase(refined, config.voxel_base_resolution, config.voxel_max_depth, config.voxel_inside_refine_dist);
+	VoxelizeRegionsBase(refined, config.voxel_base_resolution, config.voxel_max_depth,
+		config.voxel_inside_refine_dist, config.region_htg, config.global_htg,
+		config.global_htg_output, config.global_htg_force_single_label);
 
 	std::filesystem::create_directories("output");
 	WriteMultiBlock(refined, "output/geometry_multiblock.vtm");

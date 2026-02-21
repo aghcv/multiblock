@@ -28,6 +28,7 @@
 #include <filesystem>
 #include <iomanip>
 #include <iostream>
+#include <limits>
 #include <sstream>
 #include <string>
 #include <thread>
@@ -116,6 +117,20 @@ struct VoxelizationParams {
 	int insideRefineDistanceVoxels = 3;
 };
 
+struct GroupSurfaceEntry {
+	vtkSmartPointer<vtkPolyData> surface;
+	vtkSmartPointer<vtkImplicitPolyDataDistance> implicit;
+	int groupId = -1;
+	int surfaceType = -1;
+};
+
+struct RegionSurfaceEntry {
+	int regionId = -1;
+	vtkSmartPointer<vtkPolyData> combined;
+	vtkSmartPointer<vtkImplicitPolyDataDistance> implicit;
+	std::vector<GroupSurfaceEntry> groups;
+};
+
 enum class VoxelState : unsigned char {
 	Outside = 0,
 	Inside = 1,
@@ -139,13 +154,177 @@ void EnsureArraySize(vtkDataArray* arr, vtkIdType idx, double defaultValue = 0.0
 	}
 }
 
+std::vector<RegionSurfaceEntry> BuildRegionSurfaceEntries(vtkMultiBlockDataSet* regions) {
+	std::vector<RegionSurfaceEntry> entries;
+	if (!regions) return entries;
+	const int regionCount = static_cast<int>(regions->GetNumberOfBlocks());
+	entries.reserve(static_cast<size_t>(std::max(0, regionCount)));
+	for (int r = 0; r < regionCount; ++r) {
+		auto regionMb = vtkMultiBlockDataSet::SafeDownCast(regions->GetBlock(static_cast<unsigned int>(r)));
+		if (!regionMb) continue;
+		auto combined = CombineRegionSurfaces(regionMb);
+		if (!combined || combined->GetNumberOfCells() == 0) continue;
+
+		RegionSurfaceEntry entry;
+		entry.regionId = r;
+		entry.combined = combined;
+		entry.implicit = vtkSmartPointer<vtkImplicitPolyDataDistance>::New();
+		entry.implicit->SetInput(combined);
+
+		const int groupCount = static_cast<int>(regionMb->GetNumberOfBlocks());
+		entry.groups.reserve(static_cast<size_t>(std::max(0, groupCount)));
+		for (int g = 0; g < groupCount; ++g) {
+			vtkPolyData* pd = vtkPolyData::SafeDownCast(
+				regionMb->GetBlock(static_cast<unsigned int>(g)));
+			if (!pd || pd->GetNumberOfCells() == 0) continue;
+			const std::string groupName = GetBlockName(regionMb, static_cast<unsigned int>(g));
+			GroupSurfaceEntry group;
+			group.surface = pd;
+			group.implicit = vtkSmartPointer<vtkImplicitPolyDataDistance>::New();
+			group.implicit->SetInput(pd);
+			group.groupId = GetGroupId(pd, groupName);
+			group.surfaceType = GetSurfaceTypeField(pd);
+			entry.groups.push_back(group);
+		}
+		entries.push_back(entry);
+	}
+	return entries;
+}
+
+void RefineGlobalHyperTreeCell(
+	vtkHyperTreeGridNonOrientedGeometryCursor* cursor,
+	const std::vector<RegionSurfaceEntry>& regions,
+	int depth,
+	int maxDepth,
+	vtkUnsignedCharArray* stateArray,
+	vtkIntArray* levelArray,
+	vtkUnsignedCharArray* activeArray,
+	vtkUnsignedCharArray* maskArray,
+	vtkIntArray* refineArray,
+	vtkIntArray* regionArray,
+	vtkIntArray* groupArray,
+	vtkIntArray* surfaceArray,
+	bool forceSingleLabel) {
+	if (!cursor || regions.empty()) return;
+
+	double bounds[6] = {0, 0, 0, 0, 0, 0};
+	cursor->GetBounds(bounds);
+	const double cellSize = bounds[1] - bounds[0];
+	const double center[3] = {
+		0.5 * (bounds[0] + bounds[1]),
+		0.5 * (bounds[2] + bounds[3]),
+		0.5 * (bounds[4] + bounds[5])
+	};
+	const double halfDiag = 0.5 * std::sqrt(3.0) * cellSize;
+
+	int intersectRegions = 0;
+	int bestRegionIndex = -1;
+	double bestAbsDist = std::numeric_limits<double>::infinity();
+	double bestRegionDist = 0.0;
+
+	for (size_t i = 0; i < regions.size(); ++i) {
+		const double dist = regions[i].implicit->EvaluateFunction(center[0], center[1], center[2]);
+		const double distAbs = std::abs(dist);
+		if (distAbs <= halfDiag) {
+			++intersectRegions;
+		}
+		if (distAbs < bestAbsDist) {
+			bestAbsDist = distAbs;
+			bestRegionIndex = static_cast<int>(i);
+			bestRegionDist = dist;
+		}
+	}
+
+	if (intersectRegions > 1 && depth < maxDepth) {
+		cursor->SubdivideLeaf();
+		for (int child = 0; child < 8; ++child) {
+			cursor->ToChild(child);
+			RefineGlobalHyperTreeCell(cursor, regions, depth + 1, maxDepth,
+				stateArray, levelArray, activeArray, maskArray, refineArray,
+				regionArray, groupArray, surfaceArray, forceSingleLabel);
+			cursor->ToParent();
+		}
+		return;
+	}
+
+	if (bestRegionIndex < 0) {
+		return;
+	}
+
+	const RegionSurfaceEntry& region = regions[static_cast<size_t>(bestRegionIndex)];
+	int intersectGroups = 0;
+	int bestGroupIndex = -1;
+	double bestGroupAbsDist = std::numeric_limits<double>::infinity();
+	for (size_t g = 0; g < region.groups.size(); ++g) {
+		const double dist = region.groups[g].implicit->EvaluateFunction(center[0], center[1], center[2]);
+		const double distAbs = std::abs(dist);
+		if (distAbs <= halfDiag) {
+			++intersectGroups;
+		}
+		if (distAbs < bestGroupAbsDist) {
+			bestGroupAbsDist = distAbs;
+			bestGroupIndex = static_cast<int>(g);
+		}
+	}
+
+	if (intersectGroups > 1 && depth < maxDepth) {
+		cursor->SubdivideLeaf();
+		for (int child = 0; child < 8; ++child) {
+			cursor->ToChild(child);
+			RefineGlobalHyperTreeCell(cursor, regions, depth + 1, maxDepth,
+				stateArray, levelArray, activeArray, maskArray, refineArray,
+				regionArray, groupArray, surfaceArray, forceSingleLabel);
+			cursor->ToParent();
+		}
+		return;
+	}
+
+	if (intersectGroups > 1 && !forceSingleLabel) {
+		return;
+	}
+
+	int regionId = region.regionId;
+	int groupId = -1;
+	int surfaceType = -1;
+	if (bestGroupIndex >= 0 && bestGroupIndex < static_cast<int>(region.groups.size())) {
+		const auto& group = region.groups[static_cast<size_t>(bestGroupIndex)];
+		groupId = group.groupId;
+		surfaceType = group.surfaceType;
+	}
+
+	const VoxelState state = ClassifyLeaf(bestRegionDist, cellSize);
+	const vtkIdType nodeId = cursor->GetGlobalNodeIndex();
+	if (nodeId == vtkHyperTreeGrid::InvalidIndex || nodeId < 0) {
+		return;
+	}
+	EnsureArraySize(stateArray, nodeId, static_cast<double>(VoxelState::Outside));
+	EnsureArraySize(levelArray, nodeId, 0.0);
+	EnsureArraySize(activeArray, nodeId, 0.0);
+	EnsureArraySize(maskArray, nodeId, 0.0);
+	EnsureArraySize(refineArray, nodeId, 0.0);
+	EnsureArraySize(regionArray, nodeId, -1.0);
+	EnsureArraySize(groupArray, nodeId, -1.0);
+	EnsureArraySize(surfaceArray, nodeId, -1.0);
+	stateArray->SetValue(nodeId, static_cast<unsigned char>(state));
+	levelArray->SetValue(nodeId, depth);
+	activeArray->SetValue(nodeId, cursor->IsLeaf() ? 1 : 0);
+	maskArray->SetValue(nodeId, 1);
+	refineArray->SetValue(nodeId, depth);
+	regionArray->SetValue(nodeId, regionId);
+	groupArray->SetValue(nodeId, groupId);
+	surfaceArray->SetValue(nodeId, surfaceType);
+}
+
 void RefineHyperTreeCell(
 	vtkHyperTreeGridNonOrientedGeometryCursor* cursor,
 	vtkImplicitPolyDataDistance* implicit,
 	int depth,
 	int maxDepth,
 	vtkUnsignedCharArray* stateArray,
-	vtkIntArray* levelArray) {
+	vtkIntArray* levelArray,
+	vtkUnsignedCharArray* activeArray,
+	vtkUnsignedCharArray* maskArray,
+	vtkIntArray* refineArray) {
 	if (!cursor || !implicit) return;
 
 	double bounds[6] = {0, 0, 0, 0, 0, 0};
@@ -165,7 +344,8 @@ void RefineHyperTreeCell(
 		cursor->SubdivideLeaf();
 		for (int child = 0; child < 8; ++child) {
 			cursor->ToChild(child);
-			RefineHyperTreeCell(cursor, implicit, depth + 1, maxDepth, stateArray, levelArray);
+			RefineHyperTreeCell(cursor, implicit, depth + 1, maxDepth,
+				stateArray, levelArray, activeArray, maskArray, refineArray);
 			cursor->ToParent();
 		}
 		return;
@@ -178,8 +358,14 @@ void RefineHyperTreeCell(
 	const VoxelState state = ClassifyLeaf(dist, cellSize);
 	EnsureArraySize(stateArray, nodeId, static_cast<double>(VoxelState::Outside));
 	EnsureArraySize(levelArray, nodeId, 0.0);
+	EnsureArraySize(activeArray, nodeId, 0.0);
+	EnsureArraySize(maskArray, nodeId, 0.0);
+	EnsureArraySize(refineArray, nodeId, 0.0);
 	stateArray->SetValue(nodeId, static_cast<unsigned char>(state));
 	levelArray->SetValue(nodeId, depth);
+	activeArray->SetValue(nodeId, cursor->IsLeaf() ? 1 : 0);
+	maskArray->SetValue(nodeId, 1);
+	refineArray->SetValue(nodeId, depth);
 }
 
 vtkSmartPointer<vtkHyperTreeGrid> VoxelizeRegionAdaptiveHTG(
@@ -230,6 +416,18 @@ vtkSmartPointer<vtkHyperTreeGrid> VoxelizeRegionAdaptiveHTG(
 	levelArray->SetName("RefineLevel");
 	levelArray->SetNumberOfComponents(1);
 
+	auto activeArray = vtkSmartPointer<vtkUnsignedCharArray>::New();
+	activeArray->SetName("HTGActive");
+	activeArray->SetNumberOfComponents(1);
+
+	auto maskArray = vtkSmartPointer<vtkUnsignedCharArray>::New();
+	maskArray->SetName("HTGMask");
+	maskArray->SetNumberOfComponents(1);
+
+	auto refineArray = vtkSmartPointer<vtkIntArray>::New();
+	refineArray->SetName("HTGRefine");
+	refineArray->SetNumberOfComponents(1);
+
 	auto implicit = vtkSmartPointer<vtkImplicitPolyDataDistance>::New();
 	implicit->SetInput(surface);
 
@@ -238,12 +436,128 @@ vtkSmartPointer<vtkHyperTreeGrid> VoxelizeRegionAdaptiveHTG(
 		auto cursor = vtkSmartPointer<vtkHyperTreeGridNonOrientedGeometryCursor>::New();
 		grid->InitializeNonOrientedGeometryCursor(cursor, treeId, true);
 		if (!cursor->HasTree()) continue;
-		RefineHyperTreeCell(cursor, implicit, 0, params.maxDepth, stateArray, levelArray);
+		RefineHyperTreeCell(cursor, implicit, 0, params.maxDepth,
+			stateArray, levelArray, activeArray, maskArray, refineArray);
 	}
 
 
 	grid->GetCellData()->AddArray(stateArray);
 	grid->GetCellData()->AddArray(levelArray);
+	grid->GetCellData()->AddArray(activeArray);
+	grid->GetCellData()->AddArray(maskArray);
+	grid->GetCellData()->AddArray(refineArray);
+	return grid;
+}
+
+vtkSmartPointer<vtkHyperTreeGrid> VoxelizeGlobalAdaptiveHTG(
+	vtkMultiBlockDataSet* regions,
+	const VoxelizationParams& params,
+	bool forceSingleLabel) {
+	if (!regions) return nullptr;
+
+	auto regionEntries = BuildRegionSurfaceEntries(regions);
+	if (regionEntries.empty()) return nullptr;
+
+	double bounds[6] = {0, 0, 0, 0, 0, 0};
+	bool boundsInit = false;
+	for (const auto& entry : regionEntries) {
+		double b[6] = {0, 0, 0, 0, 0, 0};
+		entry.combined->GetBounds(b);
+		if (!boundsInit) {
+			for (int i = 0; i < 6; ++i) bounds[i] = b[i];
+			boundsInit = true;
+		} else {
+			bounds[0] = std::min(bounds[0], b[0]);
+			bounds[1] = std::max(bounds[1], b[1]);
+			bounds[2] = std::min(bounds[2], b[2]);
+			bounds[3] = std::max(bounds[3], b[3]);
+			bounds[4] = std::min(bounds[4], b[4]);
+			bounds[5] = std::max(bounds[5], b[5]);
+		}
+	}
+	if (!boundsInit) return nullptr;
+
+	const double dx = bounds[1] - bounds[0];
+	const double dy = bounds[3] - bounds[2];
+	const double dz = bounds[5] - bounds[4];
+	const double diag = std::sqrt(dx * dx + dy * dy + dz * dz);
+	const double voxelSize = diag / static_cast<double>(std::max(1, params.baseResolution));
+	const double margin = voxelSize * static_cast<double>(std::max(0, params.marginVoxels));
+
+	double minB[3] = {bounds[0] - margin, bounds[2] - margin, bounds[4] - margin};
+	double maxB[3] = {bounds[1] + margin, bounds[3] + margin, bounds[5] + margin};
+
+	const int nx = std::max(1, static_cast<int>(std::ceil((maxB[0] - minB[0]) / voxelSize)));
+	const int ny = std::max(1, static_cast<int>(std::ceil((maxB[1] - minB[1]) / voxelSize)));
+	const int nz = std::max(1, static_cast<int>(std::ceil((maxB[2] - minB[2]) / voxelSize)));
+
+	auto grid = vtkSmartPointer<vtkHyperTreeGrid>::New();
+	grid->SetDimensions(nx + 1, ny + 1, nz + 1);
+	grid->SetBranchFactor(2);
+
+	auto xCoords = vtkSmartPointer<vtkDoubleArray>::New();
+	auto yCoords = vtkSmartPointer<vtkDoubleArray>::New();
+	auto zCoords = vtkSmartPointer<vtkDoubleArray>::New();
+	xCoords->SetNumberOfTuples(nx + 1);
+	yCoords->SetNumberOfTuples(ny + 1);
+	zCoords->SetNumberOfTuples(nz + 1);
+	for (int i = 0; i <= nx; ++i) xCoords->SetValue(i, minB[0] + i * voxelSize);
+	for (int j = 0; j <= ny; ++j) yCoords->SetValue(j, minB[1] + j * voxelSize);
+	for (int k = 0; k <= nz; ++k) zCoords->SetValue(k, minB[2] + k * voxelSize);
+	grid->SetXCoordinates(xCoords);
+	grid->SetYCoordinates(yCoords);
+	grid->SetZCoordinates(zCoords);
+
+	auto stateArray = vtkSmartPointer<vtkUnsignedCharArray>::New();
+	stateArray->SetName("VoxelState");
+	stateArray->SetNumberOfComponents(1);
+
+	auto levelArray = vtkSmartPointer<vtkIntArray>::New();
+	levelArray->SetName("RefineLevel");
+	levelArray->SetNumberOfComponents(1);
+
+	auto activeArray = vtkSmartPointer<vtkUnsignedCharArray>::New();
+	activeArray->SetName("HTGActive");
+	activeArray->SetNumberOfComponents(1);
+
+	auto maskArray = vtkSmartPointer<vtkUnsignedCharArray>::New();
+	maskArray->SetName("HTGMask");
+	maskArray->SetNumberOfComponents(1);
+
+	auto refineArray = vtkSmartPointer<vtkIntArray>::New();
+	refineArray->SetName("HTGRefine");
+	refineArray->SetNumberOfComponents(1);
+
+	auto regionArray = vtkSmartPointer<vtkIntArray>::New();
+	regionArray->SetName("RegionId");
+	regionArray->SetNumberOfComponents(1);
+
+	auto groupArray = vtkSmartPointer<vtkIntArray>::New();
+	groupArray->SetName("GroupId");
+	groupArray->SetNumberOfComponents(1);
+
+	auto surfaceArray = vtkSmartPointer<vtkIntArray>::New();
+	surfaceArray->SetName("SurfaceType");
+	surfaceArray->SetNumberOfComponents(1);
+
+	const vtkIdType treeCount = grid->GetMaxNumberOfTrees();
+	for (vtkIdType treeId = 0; treeId < treeCount; ++treeId) {
+		auto cursor = vtkSmartPointer<vtkHyperTreeGridNonOrientedGeometryCursor>::New();
+		grid->InitializeNonOrientedGeometryCursor(cursor, treeId, true);
+		if (!cursor->HasTree()) continue;
+		RefineGlobalHyperTreeCell(cursor, regionEntries, 0, params.maxDepth,
+			stateArray, levelArray, activeArray, maskArray, refineArray,
+			regionArray, groupArray, surfaceArray, forceSingleLabel);
+	}
+
+	grid->GetCellData()->AddArray(stateArray);
+	grid->GetCellData()->AddArray(levelArray);
+	grid->GetCellData()->AddArray(activeArray);
+	grid->GetCellData()->AddArray(maskArray);
+	grid->GetCellData()->AddArray(refineArray);
+	grid->GetCellData()->AddArray(regionArray);
+	grid->GetCellData()->AddArray(groupArray);
+	grid->GetCellData()->AddArray(surfaceArray);
 	return grid;
 }
 
@@ -596,6 +910,17 @@ void CenterlineBase(vtkMultiBlockDataSet* regions,
 }
 
 void VoxelizeRegionsBase(vtkMultiBlockDataSet* regions, int baseResolution, int maxDepth, int insideRefineDist) {
+	VoxelizeRegionsBase(regions, baseResolution, maxDepth, insideRefineDist, true, false, "", true);
+}
+
+void VoxelizeRegionsBase(vtkMultiBlockDataSet* regions,
+	int baseResolution,
+	int maxDepth,
+	int insideRefineDist,
+	bool writeRegion,
+	bool writeGlobal,
+	const std::string& globalOutputPath,
+	bool forceSingleLabel) {
 	if (!regions) {
 		std::cerr << "VoxelizeRegionsBase: regions is null." << std::endl;
 		return;
@@ -613,23 +938,36 @@ void VoxelizeRegionsBase(vtkMultiBlockDataSet* regions, int baseResolution, int 
 	params.maxDepth = std::max(0, maxDepth);
 	params.insideRefineDistanceVoxels = std::max(1, insideRefineDist);
 
-	for (int r = 0; r < regionCount; ++r) {
-		auto regionMb = vtkMultiBlockDataSet::SafeDownCast(regions->GetBlock(static_cast<unsigned int>(r)));
-		if (!regionMb) continue;
+	if (writeRegion) {
+		for (int r = 0; r < regionCount; ++r) {
+			auto regionMb = vtkMultiBlockDataSet::SafeDownCast(regions->GetBlock(static_cast<unsigned int>(r)));
+			if (!regionMb) continue;
 
-		auto combined = CombineRegionSurfaces(regionMb);
-		if (!combined || combined->GetNumberOfCells() == 0) continue;
+			auto combined = CombineRegionSurfaces(regionMb);
+			if (!combined || combined->GetNumberOfCells() == 0) continue;
 
-		auto htg = VoxelizeRegionAdaptiveHTG(combined, params);
-		if (!htg) continue;
+			auto htg = VoxelizeRegionAdaptiveHTG(combined, params);
+			if (!htg) continue;
 
-		std::string regionName = GetBlockName(regions, static_cast<unsigned int>(r));
-		if (regionName.empty()) {
-			regionName = "Region_" + std::to_string(r);
+			std::string regionName = GetBlockName(regions, static_cast<unsigned int>(r));
+			if (regionName.empty()) {
+				regionName = "Region_" + std::to_string(r);
+			}
+			std::string outPath = "output/centerline_voxels/" + regionName + ".vth";
+			WriteHyperTreeGrid(htg, outPath);
+			std::cout << "VoxelizeRegionsBase: wrote " << outPath << std::endl;
 		}
-		std::string outPath = "output/centerline_voxels/" + regionName + ".vth";
-		WriteHyperTreeGrid(htg, outPath);
-		std::cout << "VoxelizeRegionsBase: wrote " << outPath << std::endl;
+	}
+
+	if (writeGlobal) {
+		std::string outPath = globalOutputPath.empty()
+			? "output/centerline_voxels/regions_global.vth"
+			: globalOutputPath;
+		auto globalHtg = VoxelizeGlobalAdaptiveHTG(regions, params, forceSingleLabel);
+		if (globalHtg) {
+			WriteHyperTreeGrid(globalHtg, outPath);
+			std::cout << "VoxelizeRegionsBase: wrote " << outPath << std::endl;
+		}
 	}
 }
 

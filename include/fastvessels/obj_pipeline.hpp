@@ -38,6 +38,14 @@ void CenterlineBase(vtkMultiBlockDataSet* regions,
 	int reportTableRows);
 
 void VoxelizeRegionsBase(vtkMultiBlockDataSet* regions, int baseResolution, int maxDepth, int insideRefineDist);
+void VoxelizeRegionsBase(vtkMultiBlockDataSet* regions,
+	int baseResolution,
+	int maxDepth,
+	int insideRefineDist,
+	bool writeRegion,
+	bool writeGlobal,
+	const std::string& globalOutputPath,
+	bool forceSingleLabel);
 
 vtkSmartPointer<vtkMultiBlockDataSet> BuildRegionSurfaceHierarchy(
 	vtkMultiBlockDataSet* inputMb,
