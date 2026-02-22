@@ -34,9 +34,9 @@ global_htg_output=output/centerline_voxels/regions_global.vth
 global_htg_force_single_label=true
 region_htg=false
 
-voxel_base_resolution=16
-voxel_max_depth=7
-voxel_inside_refine_dist=2
+voxel_base_resolution=8
+voxel_max_depth=11
+voxel_inside_refine_dist=3
 
 cpu_threads=0
 min_cpu_for_gpu=1

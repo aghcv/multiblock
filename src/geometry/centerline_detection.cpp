@@ -10,6 +10,7 @@
 #include <vtkFieldData.h>
 #include <vtkHyperTreeGrid.h>
 #include <vtkHyperTreeGridNonOrientedGeometryCursor.h>
+#include <vtkHyperTreeGridToUnstructuredGrid.h>
 #include <vtkImageData.h>
 #include <vtkImplicitPolyDataDistance.h>
 #include <vtkInformation.h>
@@ -22,6 +23,8 @@
 #include <vtkUnsignedCharArray.h>
 #include <vtkXMLHyperTreeGridWriter.h>
 #include <vtkXMLImageDataWriter.h>
+#include <vtkXMLUnstructuredGridWriter.h>
+#include <vtkUnstructuredGrid.h>
 
 #include <algorithm>
 #include <cmath>
@@ -740,6 +743,18 @@ void WriteHyperTreeGrid(vtkHyperTreeGrid* grid, const std::string& path) {
 	writer->Write();
 }
 
+void WriteHyperTreeGridAsUnstructuredGrid(vtkHyperTreeGrid* grid, const std::string& path) {
+	if (!grid || path.empty()) return;
+	auto converter = vtkSmartPointer<vtkHyperTreeGridToUnstructuredGrid>::New();
+	converter->SetInputData(grid);
+	converter->Update();
+
+	auto writer = vtkSmartPointer<vtkXMLUnstructuredGridWriter>::New();
+	writer->SetFileName(path.c_str());
+	writer->SetInputData(converter->GetOutput());
+	writer->Write();
+}
+
 
 } // namespace
 
@@ -955,6 +970,9 @@ void VoxelizeRegionsBase(vtkMultiBlockDataSet* regions,
 			}
 			std::string outPath = "output/centerline_voxels/" + regionName + ".vth";
 			WriteHyperTreeGrid(htg, outPath);
+			std::filesystem::path meshPath(outPath);
+			meshPath.replace_extension(".vtu");
+			WriteHyperTreeGridAsUnstructuredGrid(htg, meshPath.string());
 			std::cout << "VoxelizeRegionsBase: wrote " << outPath << std::endl;
 		}
 	}
@@ -966,6 +984,9 @@ void VoxelizeRegionsBase(vtkMultiBlockDataSet* regions,
 		auto globalHtg = VoxelizeGlobalAdaptiveHTG(regions, params, forceSingleLabel);
 		if (globalHtg) {
 			WriteHyperTreeGrid(globalHtg, outPath);
+			std::filesystem::path meshPath(outPath);
+			meshPath.replace_extension(".vtu");
+			WriteHyperTreeGridAsUnstructuredGrid(globalHtg, meshPath.string());
 			std::cout << "VoxelizeRegionsBase: wrote " << outPath << std::endl;
 		}
 	}
