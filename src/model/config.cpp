@@ -73,6 +73,20 @@ static std::string NormalizeWallDetectionMode(const std::string& value, const st
 	return fallback;
 }
 
+static std::string NormalizeVoxelRefineMode(const std::string& value, const std::string& fallback) {
+	if (value.empty()) {
+		return fallback;
+	}
+	const std::string lowered = ToLower(value);
+	if (lowered == "linear" || lowered == "uniform" || lowered == "default") {
+		return "linear";
+	}
+	if (lowered == "distance_jump" || lowered == "distance" || lowered == "jump") {
+		return "distance_jump";
+	}
+	return fallback;
+}
+
 std::unordered_map<std::string, std::string> ReadConfigFile(const std::string& path) {
 	std::unordered_map<std::string, std::string> values;
 	std::ifstream in(path);
@@ -229,6 +243,10 @@ void ApplyConfigOverrides(SolverConfig& config, const std::unordered_map<std::st
 	if (it != values.end() && !it->second.empty()) {
 		config.voxel_inside_refine_dist = static_cast<int>(std::max(1LL, ParseInt(it->second, config.voxel_inside_refine_dist)));
 	}
+	it = values.find("voxel_refine_mode");
+	if (it != values.end() && !it->second.empty()) {
+		config.voxel_refine_mode = NormalizeVoxelRefineMode(it->second, config.voxel_refine_mode);
+	}
 }
 
 SolverConfig LoadConfig(const std::string& path, const SolverConfig& defaults) {
@@ -296,7 +314,8 @@ void WriteConfigFile(const std::string& path,
 	out << "region_htg=" << (config.region_htg ? "true" : "false") << "\n\n";
 	out << "voxel_base_resolution=" << config.voxel_base_resolution << "\n";
 	out << "voxel_max_depth=" << config.voxel_max_depth << "\n";
-	out << "voxel_inside_refine_dist=" << config.voxel_inside_refine_dist << "\n\n";
+	out << "voxel_inside_refine_dist=" << config.voxel_inside_refine_dist << "\n";
+	out << "voxel_refine_mode=" << config.voxel_refine_mode << "\n\n";
 
 	out << "cpu_threads=" << config.cpu_threads << "\n";
 	out << "min_cpu_for_gpu=" << config.min_cpu_for_gpu << "\n";

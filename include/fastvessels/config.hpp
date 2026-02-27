@@ -50,6 +50,7 @@ struct SolverConfig {
 	int voxel_base_resolution = 32;
 	int voxel_max_depth = 4;
 	int voxel_inside_refine_dist = 2;
+	std::string voxel_refine_mode = "linear"; // linear|distance_jump
 };
 
 struct FeatureSpec {

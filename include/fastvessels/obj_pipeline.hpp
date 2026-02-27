@@ -45,7 +45,8 @@ void VoxelizeRegionsBase(vtkMultiBlockDataSet* regions,
 	bool writeRegion,
 	bool writeGlobal,
 	const std::string& globalOutputPath,
-	bool forceSingleLabel);
+	bool forceSingleLabel,
+	const std::string& refineMode);
 
 vtkSmartPointer<vtkMultiBlockDataSet> BuildRegionSurfaceHierarchy(
 	vtkMultiBlockDataSet* inputMb,
