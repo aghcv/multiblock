@@ -36,6 +36,13 @@ Run the setup script:
 bash setup.sh
 ```
 
+HPC (ODU) example:
+```bash
+module load container_env python3
+
+env USE_CRUN=1 ENV_NAME=multiblock ENV_PREFIX=~/envs bash setup.sh # EXAMPLE: env USE_CRUN=1 ENV_NAME=cxxgeom ENV_PREFIX=/home/aghorban/envs bash setup.sh
+```
+
 ## 3. Run example
 ```bash
 ./build/multiblock.mbx
